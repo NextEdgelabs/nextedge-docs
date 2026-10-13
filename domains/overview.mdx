@@ -15,12 +15,15 @@ The module maps reflect the reviewed distribution, field-force, food ERP, munici
 ```mermaid
 flowchart LR
   A["NextEdge business domains"] --> S["Urban sustainability and waste management"]
-  A --> P["Pharma ERP"]
   A --> F["Food and beverages ERP"]
   A --> B["Core banking"]
-  P --> D["Distribution and fulfillment"]
-  P --> E["Field-force and sales operations"]
-  P --> L["Membership and loyalty"]
+  A --> P
+  subgraph PH["Pharma ERP"]
+    P["Pharma ERP modules"]
+    P --> D["Distribution and fulfillment"]
+    P --> E["Field-force and sales operations"]
+    P --> L["Membership and loyalty"]
+  end
 ```
 
 ## Business domain guides
