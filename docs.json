@@ -159,7 +159,8 @@
           {
             "group": "Offerings",
             "pages": [
-              "banking/offering-matrix"
+              "banking/offering-matrix",
+              "banking/offerings/bank"
             ]
           },
           {
