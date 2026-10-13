@@ -11,6 +11,9 @@ Use the official Mintlify authoring skill for component and configuration change
 - Use NextEdge for the company, Food and beverages ERP for that business domain, and Pharma ERP for the pharma business domain.
 - Membership, milestone programs, and spin-the-wheel loyalty belong under Pharma ERP. Core banking is a separate domain; workforce operations are shared supporting capabilities.
 - Write practical guidance for new joiners and existing teammates.
+- Product/development roles report to Senior Tech Ops. Only Founder/CEO, SVP, and VP finalize requirements and approve out-of-scope finance/billing.
+- Tech Ops owns testing/UAT and release/recovery sign-off; Senior Developer/Senior Tech Ops provide technical help. Exceptions require owner/authority permission and a named alternate.
+- Workday: 9 AM–6 PM; lunch: 2–3 PM. Calendar-time SLAs remain active through assigned coverage; do not invent working days or individual on-call assignments.
 - Separate confirmed company facts from proposed organization roles and practices.
 - Do not invent employee names, reporting lines, benefit amounts, approval limits, SLAs, customer metrics, or deployed features.
 - Keep employee/customer records, secrets, and environment access details out of the published site.

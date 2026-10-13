@@ -13,28 +13,47 @@ This is the first NextEdge handbook edition, prepared on 13 October 2026 from th
 - Business domains: urban sustainability/waste management, Pharma ERP, Food and beverages ERP, and core banking.
 - Membership, milestone programs, and spin-the-wheel loyalty are modules within Pharma ERP. Workforce operations support relevant domain workflows.
 - A monolithic architecture direction using MongoDB, Node.js, Next.js, Hono/Express, and TypeScript.
-- Written Founder/Product Owner approval for out-of-scope work and its financial and billing terms before committing to or starting that work.
+- Final requirements and out-of-scope financial/billing approval are restricted to the designated Founder/CEO, SVP, or VP.
 - Required intake of all change requests and requests for new changes through support@nextlabsonline.com, with linked records for future reference.
 - Support restore/resolve targets measured in elapsed calendar time from receipt: P0 within 1 hour, P1 within 24 hours, P2 within 7 calendar days; the team provides P3/P4 schedules after review.
+- Six delivery roles: Developer, Senior Developer, Product Owner/Manager, Technical Operations, UI/UX/Product Designer, and Senior Tech Ops. Product and development report to Senior Tech Ops.
+- Tech Ops owns testing, UAT, and production release/recovery sign-off; Senior Developer and Senior Tech Ops provide technical recovery help.
+- When a primary owner is unavailable, seek the respective owner or authority permission, appoint a capable alternate, and coordinate execution and handover.
+- Working hours are 9:00 AM–6:00 PM, with a one-hour lunch break from 2:00 PM–3:00 PM.
 
-## What needs an accountable owner
+## Named owners and project configuration
 
-The role register below is intentionally unassigned. Leadership should appoint actual owners in the private team directory and record the adopted guideline version. Publishing this handbook does not establish a new reporting relationship or employment entitlement.
+Leadership should name the actual role holders and backups in the private team directory. The confirmed reporting and approval boundaries apply; project records identify the person exercising each responsibility. Other employment terms remain governed by approved company policies.
 
-| Area | Proposed accountable function | Confirmation needed |
+| Area | Accountable function | Project details to record |
 | --- | --- | --- |
-| Organization and decision rights | Leadership | Reporting lines, named functional owners, delegated authority |
-| Onboarding and everyday operations | People owner with managers | Tools, contacts, working hours, leave/expense policies |
-| Delivery and customer handoffs | Delivery owner | Team cadence, acceptance authority, escalation route |
+| Organization and decision rights | Senior Tech Ops with authorized leadership | Named people, confirmed product/development reporting, additional project reporting arrangements |
+| Onboarding and everyday operations | People owner with managers | Tools, contacts, working days/holiday schedule, approved leave/expense policies; workday/lunch hours are confirmed |
+| Delivery and customer handoffs | Product Owner/Manager and Technical Operations, coordinated by Senior Tech Ops | Named owners, cadence, approved requirements, escalation route |
 | Change request intake and traceability | Support/delivery owner | Named intake owner and ticket tooling; support@nextlabsonline.com is the confirmed mailbox |
-| Out-of-scope financial and billing approval | Founder/Product Owner | Named approver and private approval-record location; approval authority is confirmed |
+| Requirement and out-of-scope financial/billing approval | Founder/CEO, SVP, or VP only | Designated authorized approver, project approval route, written decision reference |
 | Architecture and code practices | Technical owner | Project variations, actual module boundaries, mobile stack |
-| Releases, security, and recovery | Technical/platform owner | Named contacts, approval rules, support coverage, monitoring, and recovery runbooks |
-| Support cycle and SLA measurement | Support/delivery with technical owner | Restore/resolve windows and elapsed calendar-time measurement are confirmed; name owners and record project monitoring and escalation coverage |
+| Testing/UAT, release, and recovery | Tech Ops team with Senior Developer/Senior Tech Ops technical help | Named sign-off owner, backup, permission route, access, and recovery runbook |
+| Support cycle and SLA measurement | Tech Ops with Senior Tech Ops coordination | Named coverage, monitoring, escalation, and alternate contacts across lunch/outside hours; calendar-time targets are confirmed |
 | Domain playbooks | Delivery/business analysis with domain owner | Customer-specific workflows and verified feature scope |
 | Handbook maintenance | Owner to be assigned by leadership | Review cadence and section reviewers |
 
-{/* TODO: Confirm named owners, policy sources, project tooling, support coverage, and adopted guideline version with leadership. Store sensitive details in the private directory. */}
+## Confirmed approval and exception rules
+
+| Responsibility | Confirmed rule |
+| --- | --- |
+| Operations management | Senior Tech Ops manages operations; product and development report to Senior Tech Ops |
+| Requirement finalization | Founder/CEO, SVP, and VP are the only authorized final approvers |
+| Commercial approval | Out-of-scope work and financial/billing terms require the designated authorized Founder/CEO, SVP, or VP decision |
+| Testing, UAT, and production changes | Tech Ops owns sign-off; Senior Developer and Senior Tech Ops provide recovery help |
+| Unavailable primary owner | Seek the respective owner/authority permission, name a capable alternate, coordinate affected roles, verify, and hand back |
+| Workday and lunch | 9:00 AM–6:00 PM; lunch 2:00 PM–3:00 PM; calendar-time SLAs continue through coverage arrangements |
+
+Record the exact project approval route without assuming that every decision needs a new sequential sign-off from all leadership titles. Additional reporting relationships for Technical Operations/Designer, the leadership title structure, working days, and named coverage contacts are project/company configuration rather than invented defaults.
+
+See [project ownership](/reference/templates#project-ownership-record) and [coverage and exceptions](/company/coverage-and-exceptions).
+
+{/* TODO: Record named owners/backups, approval routing, support coverage contacts, working-day calendar, and private policy sources. */}
 
 ## Maintain the handbook
 
@@ -60,9 +79,10 @@ Employment documents and approved company policies govern employment terms. Cust
 | Date | Edition | Change |
 | --- | --- | --- |
 | 13 October 2026 | 1 | Company handbook, organization model, onboarding, delivery, domain playbooks, architecture, and workflow diagrams |
-| 13 October 2026 | 1.1 | Confirmed Founder/Product Owner approval for out-of-scope work, financial impact, and billing; updated flow and change request template |
+| 13 October 2026 | 1.1 | Added the initial out-of-scope financial/billing approval flow and change request template; authority clarified in edition 1.5 |
 | 13 October 2026 | 1.2 | Required support email intake for all change requests and new changes; added traceability fields, onboarding guidance, and intake template |
 | 13 October 2026 | 1.3 | Added support lifecycle, P0–P4 targets, rollback/hotfix recovery, escalation, and support ticket record |
 | 13 October 2026 | 1.4 | Consolidated project-informed domain maps; renamed Food and beverages ERP and Pharma ERP, nested membership/loyalty under Pharma ERP, and added core banking |
+| 13 October 2026 | 1.5 | Confirmed six-role responsibilities, product/development reporting to Senior Tech Ops, leadership approval boundaries, Tech Ops sign-off, exception handovers, and work/lunch hours |
 
 See [maintaining the handbook locally](/quickstart) and [writing guidance](/guides/writing) for the editing process.

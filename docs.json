@@ -37,8 +37,10 @@
             "group": "People and organization",
             "pages": [
               "company/organization",
+              "company/roles-and-responsibilities",
               "company/ways-of-working",
-              "company/everyday-operations"
+              "company/everyday-operations",
+              "company/coverage-and-exceptions"
             ]
           },
           {
@@ -53,6 +55,7 @@
             "group": "Delivering work",
             "pages": [
               "delivery/lifecycle",
+              "delivery/requirements-and-handoffs",
               "delivery/requirements-and-quality"
             ]
           },

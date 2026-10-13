@@ -1,45 +1,53 @@
 ---
 title: "Learning paths by role"
-description: "Turn shared onboarding into role-specific learning and contributions."
+description: "Role-specific onboarding for the six NextEdge delivery roles."
 icon: "route"
 ---
 
-Everyone follows the [shared onboarding journey](/onboarding/journey). Add the path matching your responsibilities. If you cover several functions, agree priorities with your manager.
+Everyone follows the [shared onboarding journey](/onboarding/journey). Confirm your responsibilities through the [role guide](/company/roles-and-responsibilities) and your manager. A role's learning path does not grant approval authority or production access.
 
-## Delivery and business analysis
+## Developer
 
-Read the [domain playbooks](/domains/overview), [delivery lifecycle](/delivery/lifecycle), and [requirements guidance](/delivery/requirements-and-quality). Shadow a workflow walkthrough. Document actors, permissions, records, exceptions, and acceptance criteria.
+Read the [architecture](/engineering/architecture), [data guidance](/engineering/data-and-mongodb), [API boundaries](/engineering/api-and-modules), and assigned domain guide. Trace a request from UI through authorization and business logic to persisted state.
 
-**First contribution:** a ready work item that engineering and QA can implement and verify without guessing the business rule.
+For web work, learn rendering and cache boundaries. For mobile work, learn connectivity, retries, device permissions, and client compatibility through the [web/mobile guide](/engineering/web-and-mobile). Use the framework documented by the assigned project.
 
-## Web and backend engineering
+**First contribution:** a bounded implementation with relevant checks, Senior Developer review, and clear support notes.
 
-Read the [architecture](/engineering/architecture), [stack decisions](/engineering/technology-stack), [data guidance](/engineering/data-and-mongodb), and [API conventions](/engineering/api-and-modules). Trace one screen action through authorization and business logic to persisted state.
+## Senior Developer
 
-**First contribution:** a bounded, reviewed change with relevant checks and an explanation of its data and permission effects.
+Review the project's architecture decisions, critical data invariants, technical debt, release process, and support history. Learn how estimates feed the delivery plan and how recovery authority is assigned.
 
-## Mobile engineering
+**First contribution:** a technical approach and reviewed implementation that addresses normal behavior, exceptions, permission checks, migration, and recovery. Pair with a Developer and explain the tradeoffs.
 
-Read [web and mobile delivery](/engineering/web-and-mobile), the API contract, and your domain guide. Learn weak-connectivity behavior, permission prompts, retries, local state, and app-version compatibility.
+## Product Owner/Manager
 
-**First contribution:** a complete screen-to-server interaction with loading, failure, and retry states.
+Read the [requirement and handoff workflow](/delivery/requirements-and-handoffs), [quality criteria](/delivery/requirements-and-quality), [support cycle](/support/cycle-and-sla), and [change control](/company/ways-of-working#handle-a-change-in-scope).
 
-The company-wide mobile framework has not been specified in this edition. Use the assigned application's documented stack.
+Learn that Founder/CEO, SVP, and VP are the final requirement/commercial approval authorities. Learn how their recorded decision becomes a versioned document, design reference, tickets, and delivery plan. Understand the difference between backlog ownership and commercial approval.
 
-## Quality assurance
+**First contribution:** turn a recorded finalized requirement into a clear baseline and ready tickets with owners, acceptance criteria, dependencies, and decision links.
 
-Read [requirements and quality](/delivery/requirements-and-quality), [security](/engineering/security-and-access), and your domain guide. Map risks around roles, transitions, data integrity, integration failures, and concurrency.
+## Technical Operations
 
-**First contribution:** evidence for one workflow, including an invalid permission, a repeated request, and a business exception.
+Walk through an actual operating process in a safe environment. Identify users, source records, rules, exceptions, integration dependencies, and operational impact. Shadow support triage, testing/UAT sign-off, a delivery readiness review, and the Tech Ops release authorization process.
 
-## Platform and reliability
+**First contribution:** a workflow map and requirement input package, plus a reproducible support ticket with correct priority context and timestamps.
 
-Read [releases and incidents](/engineering/releases-and-incidents), the project's environment guide, and [data guidance](/engineering/data-and-mongodb). Understand deployment, monitoring, backup ownership, and recovery.
+## UI/UX/Product Designer
 
-**First contribution:** a verified staging release or recovery exercise with the procedure updated from observations.
+Study the users, devices, domain vocabulary, design system, and approved requirement baseline. Review a workflow with Technical Operations and feasibility with Senior Developer.
 
-## Growth, support, people, and finance
+**First contribution:** a versioned user flow and implementation-ready design covering normal, empty, loading, error, permission, and recovery states where relevant; review the built result.
 
-Read [who we are](/company/overview), [ownership](/company/organization), and [everyday operations](/company/everyday-operations). Learn what your function can approve and which commitments need another owner.
+## Senior Tech Ops
 
-**First contribution:** a complete handoff, reproducible support ticket, customer walkthrough, or administrative workflow appropriate to your role.
+Review client commitments, project scope, delivery capacity, open requirements, support priorities, and escalation contacts. Product Owner/Manager, Senior Developer, and Developer report to Senior Tech Ops. Confirm the leadership decision route, accountable role holders, and approved backups.
+
+**First contribution:** a coordinated delivery/support overview with clear owners, current risks, decisions required, client update plan, and a verified handoff.
+
+## Assigned verification and release responsibilities
+
+Tech Ops owns testing, UAT, and release/recovery sign-off. If assigned to these duties, confirm your named authority and backup, then learn the relevant runbook. Senior Developer and Senior Tech Ops provide technical recovery help. Verification should cover roles, state transitions, data integrity, integration failures, retries, and concurrency.
+
+Demonstrate a safe staging verification or release/recovery exercise before taking on the corresponding production responsibility. These assignments preserve the required approval and review boundaries. Learn the [coverage and exception process](/company/coverage-and-exceptions) before acting as an alternate.

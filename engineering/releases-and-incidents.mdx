@@ -4,7 +4,7 @@ description: "Release with evidence and recover with clear ownership."
 icon: "rocket"
 ---
 
-A release changes a live business process. Name the release owner, verify the intended behavior, and know how to recover before deployment.
+A release changes a live business process. Name the Tech Ops release sign-off owner, verify the intended behavior, and know how to recover before deployment. Senior Developer and Senior Tech Ops provide technical rollback/hotfix help.
 
 ## Release flow
 
@@ -13,7 +13,7 @@ flowchart TB
   A["Reviewed change and passing checks"] --> B["Verify staging workflow"]
   B --> C["Review migrations and compatibility"]
   C --> D["Record acceptance, risks and recovery"]
-  D --> E["Release owner authorizes deployment"]
+  D --> E["Tech Ops authorizes deployment"]
   E --> F["Deploy and run smoke checks"]
   F --> G{"Healthy business and technical signals?"}
   G -->|Yes| H["Observe and hand over to support"]
@@ -23,7 +23,7 @@ flowchart TB
 
 ## Release record
 
-Record the change reference, environments, owner, verification evidence, customer communication needs, migration steps, smoke checks, and recovery decision. Use the [release template](/reference/templates).
+Record the change reference, environments, Tech Ops testing/UAT and release sign-off owner, verification evidence, customer communication needs, migration steps, smoke checks, and recovery decision. Use the [release template](/reference/templates).
 
 A code rollback may not reverse a data migration, external notification, payment, or stock movement. Document those effects and a compatible recovery path separately.
 
@@ -52,6 +52,8 @@ flowchart TB
   F --> G["Communicate confirmed status"]
   G --> H["Review causes and assign prevention work"]
 ```
+
+If a primary senior or Tech Ops owner is unavailable, use the [exception workflow](/company/coverage-and-exceptions): obtain permission from the respective owner/authority, name a capable executor and coordinator, and preserve verification and handover evidence.
 
 Escalate immediately when access, money, stock, rewards, or business-critical availability may be affected. Do not wait for a perfect diagnosis. The coordinator assigns investigation and communication roles so recovery work remains focused.
 

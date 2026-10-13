@@ -1,82 +1,72 @@
 ---
 title: "Organization and ownership"
-description: "A functional organization model with clear responsibility across project teams."
+description: "Six delivery roles, leadership decisions, and accountable project ownership."
 icon: "sitemap"
 ---
 
-Use this model to make responsibility explicit as NextEdge grows. A person may cover more than one function. Each project still needs named owners and a backup for critical responsibilities.
+NextEdge's delivery model uses six roles: Developer, Senior Developer, Product Owner/Manager, Technical Operations, UI/UX/Product Designer, and Senior Tech Ops. Requirements and delivery are managed by Product Owner/Manager and Technical Operations. Development, implementation, and technical support are handled by Senior Developer and Developer. Senior Tech Ops coordinates the client, support, and delivery.
+
+Read the [detailed role responsibilities](/company/roles-and-responsibilities) for each role's inputs, outputs, and boundaries.
 
 <Note>
-  This is a proposed functional structure, not a verified reporting chart or headcount plan. Leadership should confirm reporting lines and name current owners in the private team directory. No employee names or personal contacts belong in this public handbook.
+  Product Owner/Manager, Senior Developer, and Developer report to Senior Tech Ops. Founder/CEO, SVP, and VP are the authorized requirement and commercial approvers. The Tech Ops team owns testing, UAT, and release sign-off. Record named people and backups in the private project directory.
 </Note>
 
-## Functional structure
-
-```mermaid
-flowchart LR
-  L["Company leadership"]
-  L --> G["Growth and partnerships"]
-  L --> D["Delivery and analysis"]
-  L --> E["Engineering"]
-  L --> O["People and finance"]
-  D --> P["Project delivery owners"]
-  D --> S["Enablement and support"]
-  E --> W["Web and backend"]
-  E --> M["Mobile"]
-  E --> Q["Quality assurance"]
-  E --> R["Platform and reliability"]
-```
-
-The diagram groups responsibilities. It does not require a separate department or manager for every box.
-
-## What each function owns
-
-| Function | Responsibility | Typical handoff |
-| --- | --- | --- |
-| Leadership | Direction, priorities, commercial authority, unresolved tradeoffs | Confirmed priorities and accountable owners |
-| Growth and partnerships | Customer relationship, opportunity context, commercial coordination | Discovery brief and agreed commercial scope |
-| Delivery and analysis | Workflow understanding, requirements, plan, dependencies, acceptance coordination | Ready work with rules and acceptance criteria |
-| Engineering | Technical design, implementation, maintainability, data integrity | Reviewed increment and operational guidance |
-| Quality assurance | Risk coverage, test evidence, defect visibility, release recommendation | Evidence against agreed acceptance criteria |
-| Platform and reliability | Environments, deployment, monitoring, recovery readiness | Repeatable release and recovery procedures |
-| Enablement and support | Training, request intake through support@nextlabsonline.com, feedback, adoption | Recorded email/ticket reference, owner, and follow-up evidence |
-| People and finance | Joiner coordination, approved people processes, assets, expenses | Requests routed to authorized owners |
-
-## A project team
+## Leadership and team coordination
 
 ```mermaid
 flowchart TB
-  C["Customer process owner"] <--> D["Delivery owner"]
-  D <--> T["Technical owner"]
-  T <--> B["Engineering contributors"]
-  D <--> Q["QA owner"]
-  Q <--> B
-  D <--> S["Support and enablement owner"]
-  T <--> R["Release and platform owner"]
+  L["Founder/CEO, SVP or VP"] -. Final requirements and commercial decisions .-> S["Senior Tech Ops"]
+  S --> P["Product Owner/Manager"]
+  S --> R["Senior Developer"]
+  S --> D["Developer"]
+  R -. Technical planning and review .-> D
+  T["Technical Operations team"] -. Requirements, testing and release coordination .-> S
+  U["UI/UX/Product Designer"] -. Design collaboration .-> P
 ```
 
-Delivery owns the plan and communication. The technical owner owns design coherence. QA makes risk and verification visible. The customer process owner confirms the agreed business need.
+Solid arrows show the confirmed reporting lines to Senior Tech Ops. Dotted arrows show decision or working relationships. The chart does not establish a reporting hierarchy among Founder/CEO, SVP, and VP or assign the Designer and Technical Operations an unconfirmed direct manager.
 
-## Decision rights
+Only Founder/CEO, SVP, and VP may finalize requirements and approve out-of-scope work and financial/billing terms. Record the designated authorized approver and the project's required approval route. Product Owner/Manager documents the finalized requirement and manages execution; Senior Tech Ops manages operations, team coordination, client expectations, and delivery risk.
 
-Assign one accountable role for each decision. Review and consultation do not transfer accountability.
+## Responsibility overview
 
-| Decision | Accountable role | Consult before deciding |
+| Role | Main responsibility | Primary output |
 | --- | --- | --- |
-| Commercial scope or contractual commitment | Leadership or authorized commercial owner | Growth, delivery, technical owner |
-| Out-of-scope work and its financial/billing terms, including discounts or no-charge exceptions | Founder/Product Owner | Delivery, technical owner, finance, growth where relevant |
-| Backlog priority within agreed scope | Delivery owner | Customer process owner, technical owner, QA |
-| Technical design | Technical owner | Implementers, QA, platform |
-| Business acceptance | Designated customer process owner | Delivery, QA |
-| Release execution | Named release owner | Technical owner, QA, delivery |
-| People or reimbursement decisions | Authorized people/finance owner | Reporting manager, affected employee |
+| Developer | Implement assigned work, investigate support issues, provide verification evidence | Reviewed implementation and support findings |
+| Senior Developer | Technical feasibility, implementation planning, review, mentoring, technical support coordination | Technical approach, review result, release/recovery evidence |
+| Product Owner/Manager | Document finalized requirements, manage tickets, plan and track delivery | Versioned baseline, backlog, delivery and acceptance record |
+| Technical Operations | Clarify requirements, triage requests, coordinate readiness, own testing/UAT and release sign-off | Workflow input, verification evidence, acceptance/release decisions |
+| UI/UX/Product Designer | User journeys, interaction design, implementation handoff, experience review | Versioned designs, states, and design verification |
+| Senior Tech Ops | Client coordination, support oversight, team handoffs, delivery risk and escalation | Delivery/support overview and coordinated decisions |
 
-The Founder/Product Owner approval rule for out-of-scope work is a confirmed company requirement. Delivery coordinates the request, engineering estimates it, and finance supports costing and billing. None of those steps substitutes for written approval. Follow the [scope-change workflow](/company/ways-of-working#handle-a-change-in-scope) before committing to or starting additional work.
+The Tech Ops team owns QA/testing sign-off, UAT acceptance, production release, and rollback/hotfix authorization. Senior Developer and Senior Tech Ops provide technical recovery help. Name the accountable Tech Ops owner for each decision; Developers provide implementation and test evidence.
 
-All change requests and requests for new changes enter through [support@nextlabsonline.com](mailto:support@nextlabsonline.com). Support/delivery coordinates intake and traceability; approval authority remains with the role responsible for the decision.
+## Decision rights and boundaries
 
-## Raise a blocker
+| Decision or record | Responsible owner or authority | Required input |
+| --- | --- | --- |
+| Requirement clarification | Technical Operations with Product Owner/Manager | Client process, examples, rules, risks |
+| Requirement finalization | Designated authorized approver from Founder/CEO, SVP, or VP | Senior Tech Ops coordination, operational, design, and technical input |
+| Requirement document and version history | Product Owner/Manager | Recorded finalization decision |
+| Delivery backlog and plan | Product Owner/Manager with Technical Operations; Senior Tech Ops coordinates risks | Senior Developer estimates, design readiness, dependencies |
+| Technical approach and review | Assigned technical owner, normally Senior Developer | Developer findings, data/security implications, acceptance criteria |
+| Experience design | UI/UX/Product Designer with requirement owner review | Approved business rules and technical constraints |
+| QA/testing sign-off | Named Tech Ops team owner | Test results and evidence against acceptance criteria |
+| UAT/business acceptance | Tech Ops team coordinates and signs off UAT; records customer confirmation where required | Demonstration, user feedback, verification evidence |
+| Production release or P0 rollback/hotfix | Named Tech Ops authority, with Senior Developer and Senior Tech Ops technical help | Technical recommendation, risk, checks, recovery plan |
+| Out-of-scope work and financial/billing terms | Designated authorized approver from Founder/CEO, SVP, or VP only | Scope, estimate, financial impact, billing proposal, customer agreement |
 
-Take the issue to its functional owner with the impact, decision needed, and next useful action. If ownership is missing or two functions cannot resolve a tradeoff, delivery routes it to leadership. Report security or data-integrity incidents immediately through the [incident flow](/engineering/releases-and-incidents).
+A person may fill more than one role, but each work item still needs a clear owner and review boundary. A job title alone does not grant commercial approval or production access.
 
-Record project owners before kickoff using the [project brief](/reference/templates).
+## Intake and escalation
+
+All change requests and requests for new changes enter through [support@nextlabsonline.com](mailto:support@nextlabsonline.com). Technical Operations captures context; Product Owner/Manager maintains the linked work record; Senior Tech Ops coordinates ownership, client updates, and escalation.
+
+For P0, alert the named incident and technical owners immediately. Investigation and authorized recovery run alongside administration. Follow the [support cycle and SLA](/support/cycle-and-sla).
+
+Raise unresolved workflow questions with Technical Operations and Product Owner/Manager, technical blockers with Senior Developer, and cross-team/client/priority conflicts with Senior Tech Ops. Senior Tech Ops routes decisions to the named leadership authority.
+
+Record actual people, backups, reporting lines, and approval references in the private [project ownership record](/reference/templates#project-ownership-record). Use the [handoff workflow](/delivery/requirements-and-handoffs) to move work between roles.
+
+If a senior person or primary owner is unavailable, follow [coverage and exceptions](/company/coverage-and-exceptions): obtain permission from the respective owner or authorized authority, name a capable alternate, and coordinate execution and verification. Absence does not create automatic approval authority.

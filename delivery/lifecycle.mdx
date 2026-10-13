@@ -6,6 +6,8 @@ icon: "diagram-project"
 
 Use this lifecycle as the default delivery guideline. Project size changes the amount of documentation, but should not remove ownership, acceptance criteria, or recovery planning.
 
+The [six-role handoff workflow](/delivery/requirements-and-handoffs) explains how Technical Operations, Product Owner/Manager, Designer, Senior Developer, Developer, and Senior Tech Ops move work through these stages.
+
 ## Delivery flow
 
 ```mermaid
@@ -27,14 +29,15 @@ flowchart TB
 
 | Stage | Lead owner | Output before moving forward |
 | --- | --- | --- |
-| Discovery | Delivery/business analysis | Workflow, actors, pain points, example records |
-| Scope | Delivery with authorized commercial owner; Founder/Product Owner for out-of-scope changes | Boundaries, assumptions, dependencies, success measures, and approved change terms where applicable |
-| Design | Technical owner with delivery and UX responsibility | Data flow, permissions, rules, exceptions |
-| Build | Assigned contributors | Working increment and implementation evidence |
-| Verify | QA with engineering | Acceptance evidence and remaining risks |
-| Accept | Designated customer process owner | Recorded acceptance or agreed gaps |
-| Release | Named release owner | Release record, recovery plan, support handover |
-| Operate | Support/platform with delivery | Issues, operational signals, improvement backlog |
+| Discovery | Technical Operations with Product Owner/Manager | Workflow, actors, pain points, example records |
+| Scope/finalization | Designated Founder/CEO, SVP, or VP, coordinated by Senior Tech Ops | Finalized boundaries, rules, assumptions, dependencies, decision reference |
+| Requirement baseline and plan | Product Owner/Manager with Technical Operations | Versioned document, ready tickets, estimates, dependencies |
+| Design | UI/UX/Product Designer with Senior Developer and requirement-owner input | User flow, data flow, permissions, rules, exceptions |
+| Build | Developer with Senior Developer planning and review | Working increment and implementation evidence |
+| Verify | Tech Ops testing owner with engineering and design input | Acceptance evidence and remaining risks |
+| Accept | Tech Ops UAT owner, recording customer confirmation where required | Recorded acceptance or agreed gaps |
+| Release | Tech Ops release authority with Senior Developer/Senior Tech Ops technical help | Release record, recovery plan, support handover |
+| Operate | Senior Tech Ops with Technical Operations, Product Owner/Manager, and development support | Issues, operational signals, verified recovery, improvement backlog |
 
 ## Start with a complete slice
 
@@ -48,7 +51,7 @@ Send every change request or request for new changes through [support@nextlabson
 
 A new request does not automatically become committed work. Follow the [scope-change approval flow](/company/ways-of-working#handle-a-change-in-scope): record the proposed change, effort and timeline impact, financial impact, and billing terms against that support reference.
 
-Obtain written Founder/Product Owner approval and record customer agreement before starting the additional work. Finance bills only against the approved terms and agreed trigger or milestone. Return revised scope, pricing, or billing terms for approval; do not absorb the change silently or promise a free addition without authorization.
+Obtain written approval from the designated Founder/CEO, SVP, or VP and record customer agreement before starting the additional work. Finance bills only against the approved terms and agreed trigger or milestone. Return revised scope, pricing, or billing terms for approval; do not absorb the change silently or promise a free addition without authorization.
 
 ## Measure the result
 

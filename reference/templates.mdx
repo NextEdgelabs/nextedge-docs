@@ -15,11 +15,58 @@ Copy these structures into the approved project workspace. Assign an owner and l
 | Delivery and technical owners | Who coordinates the plan and the design? |
 | QA, release, and support owners | Who verifies, deploys, and receives the handover? |
 | Scope and exclusions | What is included in this increment? |
-| Change approval | For out-of-scope work, link written Founder/Product Owner approval and the agreed financial and billing terms |
+| Change approval | For out-of-scope work, link written approval from the designated Founder/CEO, SVP, or VP and the agreed financial and billing terms |
 | Workflow and records | Actors, states, source systems, and important data |
 | Success measures | Baseline, measurement method, and expected direction |
 | Dependencies and risks | Integrations, access, data, open decisions |
 | Acceptance and release | Evidence needed and the agreed release approach |
+
+## Project ownership record
+
+Name people or approved team contacts in the restricted project workspace. Keep responsibilities separate even when one person fills several roles.
+
+```text
+Project and delivery scope:
+Senior Tech Ops:
+Technical Operations:
+Product Owner/Manager:
+UI/UX/Product Designer:
+Senior Developer:
+Developer(s):
+Requirements finalization authority (Founder/CEO, SVP, or VP) and project approval route:
+Commercial/out-of-scope/billing authority (Founder/CEO, SVP, or VP):
+Tech Ops testing/QA sign-off owner and backup:
+Tech Ops UAT sign-off owner and customer confirmation contact:
+Tech Ops production release authority and backup:
+Tech Ops P0 rollback/hotfix authority and backup:
+Senior Developer/Senior Tech Ops recovery help:
+Permitted alternate executor and authorization reference:
+Support escalation contact and coverage:
+Confirmed reporting to Senior Tech Ops and other project reporting arrangements:
+Approval references and effective date:
+```
+
+Use the [roles guide](/company/roles-and-responsibilities) and [handoff workflow](/delivery/requirements-and-handoffs). Do not infer approval authority from a job title.
+
+## Exception and handover record
+
+Use the [coverage and exception workflow](/company/coverage-and-exceptions). Record authorization before an alternate executes the permitted action.
+
+```text
+Project and task/incident reference:
+Unavailable primary owner and impact:
+Requested action, urgency and environment:
+Authorizing owner/authority and contact:
+Permission time, channel and reference:
+Applicable standing authorization, if any:
+Acting coordinator and alternate executor:
+Permitted scope, limits and duration/completion condition:
+Access and technical review checks:
+Tech Ops testing/release/recovery sign-off owner:
+Affected teammates and client update owner:
+Action taken and verification evidence:
+Follow-up, hand-back time and original owner notification:
+```
 
 ## Change request intake
 
@@ -67,7 +114,7 @@ Closure time and outcome:
 
 ## Out-of-scope change request
 
-Store the completed record in the restricted project workspace. Delivery owns coordination; the Founder/Product Owner approves the work and its financial and billing terms.
+Store the completed record in the restricted project workspace. Product Owner/Manager and Technical Operations coordinate the record; the designated Founder/CEO, SVP, or VP approves the work and its financial and billing terms.
 
 ```text
 Change reference and project:
@@ -83,7 +130,7 @@ Billing basis and currency:
 Invoice trigger or milestone and payment terms:
 Discount or no-charge exception, if any:
 Finance review reference:
-Founder/Product Owner decision:
+Leadership decision (Founder/CEO, SVP, or VP):
 Approver, decision date and written approval reference:
 Approved scope, amount and billing terms:
 Customer agreement reference:
@@ -96,6 +143,25 @@ Reapproval reference if the change is revised:
 Keep implementation on hold while approval is missing, rejected, deferred, or awaiting clarification. A customer request is not internal financial approval. Use the [scope-change workflow](/company/ways-of-working#handle-a-change-in-scope) to route the decision.
 
 ## Workflow specification
+
+For a finalized requirement baseline, Product Owner/Manager adds the version and decision record below, then uses the workflow fields that follow.
+
+```text
+Requirement document ID, version and status:
+Product Owner/Manager and Technical Operations owner:
+Originating request/email/ticket:
+Requirements finalization authority:
+Finalization decision, date and reference:
+Approved scope and exclusions:
+Business rules and unresolved decisions:
+Designer and versioned design reference:
+Senior Developer feasibility/estimate reference:
+Acceptance criteria and named verification owner:
+Customer acceptance authority:
+Release/recovery authority:
+Linked epics, tickets, dependencies and delivery plan:
+Change history and superseded baseline:
+```
 
 ```text
 Workflow:
