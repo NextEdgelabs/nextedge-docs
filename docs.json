@@ -135,7 +135,41 @@
         ]
       },
       {
-        "tab": "Banking review"
+        "tab": "Banking review",
+        "groups": [
+          {
+            "group": "Start here",
+            "pages": []
+          },
+          {
+            "group": "Applications",
+            "pages": []
+          },
+          {
+            "group": "Offerings",
+            "pages": []
+          },
+          {
+            "group": "Core and operations modules",
+            "pages": []
+          },
+          {
+            "group": "Lending modules",
+            "pages": []
+          },
+          {
+            "group": "Cards and ATM modules",
+            "pages": []
+          },
+          {
+            "group": "Control and delivery modules",
+            "pages": []
+          },
+          {
+            "group": "Review and decisions",
+            "pages": []
+          }
+        ]
       }
     ]
   },
