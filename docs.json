@@ -180,7 +180,9 @@
               "banking/modules/b08",
               "banking/modules/b09",
               "banking/modules/b10",
-              "banking/modules/b11"
+              "banking/modules/b11",
+              "banking/modules/b33",
+              "banking/modules/b35"
             ]
           },
           {
@@ -213,12 +215,26 @@
               "banking/modules/b26",
               "banking/modules/b27",
               "banking/modules/b28",
-              "banking/modules/b29"
+              "banking/modules/b29",
+              "banking/modules/b30",
+              "banking/modules/b31",
+              "banking/modules/b32",
+              "banking/modules/b34"
             ]
           },
           {
             "group": "Review and decisions",
-            "pages": []
+            "pages": [
+              "banking/journeys",
+              "banking/scenario-matrix",
+              "banking/current-system-gap",
+              "banking/delivery-plan",
+              "banking/decisions",
+              "banking/references",
+              "banking/glossary",
+              "banking/roles-and-permissions",
+              "banking/api-and-data-contracts"
+            ]
           }
         ]
       }

@@ -1,0 +1,49 @@
+---
+title: "Decision register"
+description: "Resolve one exact decision at a time before implementing dependent banking behaviour."
+---
+
+**All decisions below are open for the new Banking project unless explicitly recorded as confirmed.** Describing a candidate module or fictional example does not approve it.
+
+## Confirmed request
+
+New project name Banking; Super Admin, Banking Operations, Customer Web, mobile-facing APIs and ATM application; bank/NBFC and debit/prepaid/credit-card coverage; configurable offerings; Mintlify-first review with module flows/examples; confirmation before implementation.
+
+## Decision 1: core ownership
+
+Should Banking own the authoritative account, deposit/loan subledger and general ledger, or orchestrate an existing bank-owned core through contracted APIs?
+
+| Option | Result | Main dependency |
+| --- | --- | --- |
+| Owned core | Banking implements financial books, product economics, business-date/EOD and controlled correction | Full accounting/policy ownership, migration, reconciliation, audit and recovery acceptance |
+| External-core operations platform | Banking manages approved operating/channel workflows; existing core confirms books and financial effects | Complete read/quote/instruction/status/finality contracts and bank-owned connector |
+| Explicit hybrid | Name exactly which product books are owned and which are external | Cross-book settlement, source of truth, reconciliation and failure ownership for every boundary |
+
+Recommendation for review: select the boundary for the first institution before choosing modules to build. Do not promise a core banking deployment while leaving financial book ownership undefined. If the intended product is a full new core, record Owned core explicitly and accept the corresponding scope.
+
+## Sequenced remaining decisions
+
+Ask these individually after decision 1. Do not send a bulk approval request.
+
+| ID | Exact decision needed | Blocks |
+| --- | --- | --- |
+| D02 | Which first institution category and offering: authorised bank, lending NBFC, specifically permitted card issuer or PPI issuer? | Legal capability and launch product bundle |
+| D03 | Which first end-to-end product and customer type should launch? | Execution packet and acceptance sample |
+| D04 | Which legal entity is issuer/lender/deposit holder, and who owns bank policy/finance/security/UAT? | Accountable permissions and commissioning |
+| D05 | Which provider/core/processor/network interfaces are contracted, and who builds connectors? | Real instructions, statuses and certification |
+| D06 | What are product economics, posting rules, calendars and statement/closure semantics? | Exact calculations and financial jobs |
+| D07 | Which duties make/check/override each operation, including amount and branch boundaries? | Approval and staff access |
+| D08 | Which physical/virtual debit, PPI and credit variants and programme roles are first release? | Card engines and issuer configurations |
+| D09 | Is ATM scope the physical terminal client, fleet console or both; which vendor/switch/services? | Hardware/security/cash integration |
+| D10 | What mobile session/device/proof/recovery contracts and supported clients are required? | Mobile API security and commissioning |
+| D11 | Which previously held complaints/notes/reassignment workflows enter the new project? | Their states, visibility and servicing policy |
+| D12 | Which treasury, UPI, foreign-exchange, acquiring or specialised lending areas are commissioned? | Scope expansions; none inferred from M2P |
+| D13 | Which reports, notices, retention, filing and reconciliation completeness rules are mandatory? | Operating/regulatory acceptance |
+| D14 | What deployment isolation, residency, capacity/latency and RPO/RTO targets apply? | Infrastructure, performance and DR acceptance |
+| D15 | Where should the separate implementation repository and final Banking Mintlify site live? | Project setup/publication ownership |
+
+## Decision record format
+
+For each answer record authorised owner, date, selected option, rationale, scope, impacted modules, exact policy/contract/version, synthetic examples and remaining dependencies. Keep implementation authorisation separate from production release.
+
+Legacy permissions/holds remain facts about the old project. They are not automatically new financial grants and need not be re-asked to preserve their current behaviour. M01 acceptance is separately pending; reviewing Banking does not start M02 or accept the legacy release.

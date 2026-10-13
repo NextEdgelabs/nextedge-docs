@@ -1,0 +1,37 @@
+---
+title: "Operating duties and permission boundaries"
+description: "Review action-level authority without giving any role blanket access to the bank."
+---
+
+Role titles are proposed duties. Exact assignment, amount/branch limits, independence and emergency authority need bank approval. The platform has no default universal “run everything” account.
+
+| Duty | Candidate authority | Separation/limit |
+| --- | --- | --- |
+| Platform operator | Institution/platform setup and explicit bank assignments | No implicit customer/fund access; no self-commissioning |
+| Institution administrator | Delegated organisation, products and staff administration | Cannot silently appoint financial checker or recover own credentials |
+| Branch service officer | Assigned customer/account servicing | Current branch and mandate scope on every action |
+| Teller/cash supervisor | Permitted cash receipt/payout, till/vault custody | Cash dual control and independent correction authority |
+| Product/pricing maker/checker | Proposed terms, simulation and controlled publication | No author approving own prohibited change |
+| Credit analyst/approver | Evidence assessment and sanction under delegation | Exposure and deviation limits; independent authority |
+| Loan servicing/collections | Approved servicing, agent contact and recovery cases | Waiver, settlement and write-off separately granted |
+| Card programme/operations | Issuer-scoped programme, issuance and servicing | Sensitive-data controls; credit decisions separately authorised |
+| Dispute officer | Evidence/network cases | Financial adjustment and loss authority separate |
+| Finance/reconciliation | Books, control totals, settlement and approved corrections | Maker/checker and period controls |
+| Risk/compliance | Restricted investigation and authorised restrictions/filings | Customer views cannot expose protected investigative evidence |
+| ATM operator/custodian | Terminal maintenance, cash custody and journal review | No ordinary customer PIN or unrestricted issuer posting access |
+| Customer/signatory | Own products under current mandate | Joint, corporate and add-on duties remain distinct |
+| Integration client | Explicit institution/programme/API scopes | No human admin powers or body-supplied identity |
+
+Permission evaluation combines current identity, legal institution, programme, product, action, resource relationship, branch, state, amount, proof, approval and policy version. Deactivation, reassignment and restrictions take effect at the protected-operation boundary, not only on the next menu load.
+
+## Example
+
+A Mumbai branch officer can view a permitted DEMOBANK customer and request an eligible servicing action. They cannot view a DEMONBFC customer with a similar reference, grant themselves Head Office, sanction a loan without credit authority or approve their own prohibited adjustment.
+
+A Bank Admin can manage the whole institution's delegated administrative configuration while finance, lending, cash and cards retain separately commissioned duties. This supports full operations without collapsing maker/checker separation.
+
+## Access review journey
+
+Request duty → verify employment/evidence → independently approve where required → enroll → verify scoped actions → periodically review → change/revoke → reject prior sessions → retain history. Lost-factor recovery is a separate approved workflow, never an admin password bypass.
+
+See [B02](/banking/modules/b02), [B32](/banking/modules/b32) and [decisions](/banking/decisions).
