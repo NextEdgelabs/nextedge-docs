@@ -1,0 +1,60 @@
+---
+title: "Membership, milestones, and rewards"
+description: "Design a traceable loyalty lifecycle, including spin-the-wheel experiences."
+icon: "gift"
+---
+
+Loyalty can combine membership benefits, milestone achievements, and reward experiences such as spin the wheel. Keep membership status, eligibility, reward allocation, and redemption separate so each can be explained and audited.
+
+## Loyalty lifecycle
+
+```mermaid
+flowchart TB
+  A["Enroll or activate membership"] --> B["Record qualifying activity"]
+  B --> C["Evaluate versioned program rules"]
+  C --> D{"Milestone or benefit eligible?"}
+  D -->|No| E["Show progress or reason"]
+  D -->|Yes| F["Create entitlement once"]
+  F --> G["Allocate reward or allow eligible spin"]
+  G --> H["Record reward and expiry"]
+  H --> I["Redeem with authorized validation"]
+  I --> J["Record redemption or reversal"]
+```
+
+## Spin-the-wheel request
+
+```mermaid
+sequenceDiagram
+  participant U as Member app
+  participant A as Authorized API
+  participant D as Reward records
+  U->>A: Request spin with stable request ID
+  A->>A: Authenticate and check eligibility
+  A->>D: Atomically claim entitlement and record outcome
+  D-->>A: Committed outcome
+  A-->>U: Reward result and reference
+  U->>U: Animate the recorded outcome
+  U->>A: Retry same request after timeout
+  A-->>U: Return original result
+```
+
+This is a target design, not a description of an inspected implementation. Use atomic state changes and uniqueness constraints appropriate to the data model.
+
+## Program rules to agree
+
+| Rule | Question |
+| --- | --- |
+| Membership | What activates, renews, suspends, or expires membership? |
+| Milestone | Which event qualifies, and how do returns affect progress? |
+| Benefit | Can it be earned once, once per period, or repeatedly? |
+| Spin | Who is eligible, how often, and which reward inventory applies? |
+| Redemption | Where, when, and by whom can a benefit be redeemed? |
+| Reversal | What happens after fraud, cancellation, or an incorrect award? |
+
+The server determines and stores the reward outcome. The animation displays that outcome. Do not let a client-provided reward ID or a visual result allocate value.
+
+## Acceptance checks
+
+Concurrent spins must not consume the same entitlement twice. A retry returns the original outcome. Exhausted reward inventory needs a defined response. Eligibility uses a recorded rule version and time boundary. Redemption is checked by the server and recorded once.
+
+Program owners must approve the published eligibility and reward terms before launch. This handbook does not specify prize probabilities or commercial terms.

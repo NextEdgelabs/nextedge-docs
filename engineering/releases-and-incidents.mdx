@@ -1,0 +1,60 @@
+---
+title: "Releases, support, and incidents"
+description: "Release with evidence and recover with clear ownership."
+icon: "rocket"
+---
+
+A release changes a live business process. Name the release owner, verify the intended behavior, and know how to recover before deployment.
+
+## Release flow
+
+```mermaid
+flowchart TB
+  A["Reviewed change and passing checks"] --> B["Verify staging workflow"]
+  B --> C["Review migrations and compatibility"]
+  C --> D["Record acceptance, risks and recovery"]
+  D --> E["Release owner authorizes deployment"]
+  E --> F["Deploy and run smoke checks"]
+  F --> G{"Healthy business and technical signals?"}
+  G -->|Yes| H["Observe and hand over to support"]
+  G -->|No| I["Contain, recover or roll back"]
+  I --> J["Verify data and service state"]
+```
+
+## Release record
+
+Record the change reference, environments, owner, verification evidence, customer communication needs, migration steps, smoke checks, and recovery decision. Use the [release template](/reference/templates).
+
+A code rollback may not reverse a data migration, external notification, payment, or stock movement. Document those effects and a compatible recovery path separately.
+
+## Observe the business as well as the server
+
+| Signal | Why it matters |
+| --- | --- |
+| Errors, latency, saturation | Reveals service health and capacity problems |
+| Pending or failed jobs | Reveals delayed imports, notifications, and integrations |
+| Order and stock discrepancies | Reveals business state that may need reconciliation |
+| Duplicate rewards or redemptions | Reveals broken integrity controls |
+| Failed field sync | Reveals work the manager may not yet see |
+| Backup and restore checks | Confirms a recovery path exists and works |
+
+Set actual alert thresholds, support coverage, escalation contacts, and recovery objectives in the project runbook. This edition does not invent company-wide service-level commitments.
+
+## Incident flow
+
+```mermaid
+flowchart TB
+  A["Detect or receive report"] --> B["Open restricted incident record"]
+  B --> C["Name incident coordinator and technical owner"]
+  C --> D["Assess impact and contain"]
+  D --> E["Recover service and reconcile data"]
+  E --> F["Verify with affected workflow owners"]
+  F --> G["Communicate confirmed status"]
+  G --> H["Review causes and assign prevention work"]
+```
+
+Escalate immediately when access, money, stock, rewards, or business-critical availability may be affected. Do not wait for a perfect diagnosis. The coordinator assigns investigation and communication roles so recovery work remains focused.
+
+## Support handoff
+
+Provide the affected workflow, reproduction steps using sanitized data, impact, relevant references, workaround if verified, and next update owner. A fix is complete only after the affected workflow and any damaged records have been checked.

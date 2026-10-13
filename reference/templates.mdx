@@ -1,0 +1,93 @@
+---
+title: "Working templates"
+description: "Reusable records for projects, workflows, onboarding, architecture decisions, and releases."
+icon: "file-lines"
+---
+
+Copy these structures into the approved project workspace. Assign an owner and link the source work item. Use fictional examples in public documentation; keep customer, employee, and incident records in restricted systems.
+
+## Project brief
+
+| Field | What to record |
+| --- | --- |
+| Problem and outcome | Who needs what to improve, and why? |
+| Process owner | Who can confirm business rules and acceptance? |
+| Delivery and technical owners | Who coordinates the plan and the design? |
+| QA, release, and support owners | Who verifies, deploys, and receives the handover? |
+| Scope and exclusions | What is included in this increment? |
+| Workflow and records | Actors, states, source systems, and important data |
+| Success measures | Baseline, measurement method, and expected direction |
+| Dependencies and risks | Integrations, access, data, open decisions |
+| Acceptance and release | Evidence needed and the agreed release approach |
+
+## Workflow specification
+
+```text
+Workflow:
+Business outcome:
+Actors and permissions:
+Trigger and prerequisites:
+Inputs and validation:
+Normal steps:
+States and permitted transitions:
+Exceptions and correction paths:
+Tenant and record ownership:
+Retry, concurrency and offline behavior:
+Audit, reporting and reconciliation:
+Acceptance scenarios:
+Business-rule owner:
+```
+
+Attach a flow diagram and at least one normal and one exception scenario. Name the source of truth for each important status or balance.
+
+## Onboarding record
+
+| Field | What to record privately |
+| --- | --- |
+| Role, manager, and buddy | Confirmed people and responsibilities |
+| Initial project | Domain and first workflow to learn |
+| Access | Requested, approved, verified, blocked |
+| First day and first week | Activities, evidence, and open questions |
+| 30/60/90-day outcomes | Agreed learning and contribution goals |
+| Role-specific readiness | Relevant checks and functional owner |
+| Follow-up | Support needed, next action, and review date |
+
+## Architecture decision record
+
+```text
+Title and decision reference:
+Status: proposed / accepted / superseded
+Date and accountable owner:
+Context and constraints:
+Options considered:
+Decision:
+Benefits and costs:
+Data, security and operations impact:
+Migration and compatibility:
+Evidence or validation:
+When to revisit:
+Related work and superseded decisions:
+```
+
+A decision is useful when a future teammate can understand the tradeoff. Avoid documenting a preference without explaining the problem it solves.
+
+## Release and recovery record
+
+```text
+Release reference and change:
+Release owner and support owner:
+Target environment:
+Verification and acceptance evidence:
+Known risks and authorized decision:
+Migration and compatibility steps:
+Deployment procedure:
+Smoke checks and observation signals:
+Rollback or forward-recovery procedure:
+External effects and data reconciliation:
+Communication and next update owner:
+Observed outcome:
+```
+
+## Incident review
+
+Record the impact, timeline, detection, containment, recovery, data reconciliation, and contributing conditions. Assign prevention actions with owners and verification criteria. Focus on improving the system and process.

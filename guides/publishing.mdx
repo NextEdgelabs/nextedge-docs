@@ -1,0 +1,32 @@
+---
+title: "Publish handbook updates"
+description: "Move validated handbook changes through the connected repository to Mintlify."
+icon: "rocket"
+---
+
+## Connected project
+
+The NextEdge Mintlify project uses [nextedgelabs/nextedge-docs](https://github.com/nextedgelabs/nextedge-docs) on the main branch. The published site is [nextedge.mintlify.site](https://nextedge.mintlify.site).
+
+## Prepare the change
+
+Store the documentation source in a Git repository. Include `docs.json`, the MDX pages, assets, `package.json`, and `package-lock.json`. Exclude `node_modules` and local caches.
+
+## Publish and verify
+
+1. Preview affected pages and check every changed diagram.
+2. Run `npm run validate` and `npm run check:links`.
+3. Commit the intended source files, preserving unrelated work.
+4. Merge or push through the repository's configured branch rules.
+5. Check the deployment result in the Mintlify dashboard.
+6. Open the live site and verify the affected pages.
+
+<Note>
+  A Git push and a successful deployment are separate events. If deployment fails, inspect the build result before triggering another update.
+</Note>
+
+## Review before publishing
+
+Check the site name, page navigation, logo appearance, and links. Replace the starter content with reviewed product documentation before making product guidance public.
+
+See the [Mintlify quickstart](https://www.mintlify.com/docs/quickstart) for the current dashboard setup flow.

@@ -1,47 +1,50 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Maintain the handbook locally"
+description: "Preview, validate, and contribute to the NextEdge handbook."
+icon: "bolt"
 ---
-
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
 
 ## Prerequisites
 
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+Use Node.js 20.17 or newer, below version 25, and npm.
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Install dependencies">
+    From the documentation folder, run:
 
     ```bash
-    npm install your-package
+    npm ci
     ```
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
-
+  <Step title="Start the preview">
     ```bash
-    your-cli init
+    npm run dev
     ```
-  </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
+    Open [localhost:3333](http://localhost:3333). If that port is busy, use the port printed in the terminal.
+  </Step>
+  <Step title="Make your first change">
+    Edit `index.mdx` and save it. The preview updates as you work.
+  </Step>
+  <Step title="Check your documentation">
     ```bash
-    your-cli start
+    npm run validate
+    npm run check:links
     ```
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## Project files
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+| File or folder | Purpose |
+| --- | --- |
+| `docs.json` | Branding, theme, and navigation |
+| `index.mdx` | Handbook starting point |
+| `company/` and `onboarding/` | Company guidance and joiner learning paths |
+| `delivery/` and `domains/` | Delivery practices and business playbooks |
+| `engineering/` | Architecture and technical guidelines |
+| `reference/` | Templates, glossary, ownership, and edition history |
+| `guides/` | Writing and publishing guidance |
+| `logo/` | Light and dark SVG wordmarks |
+
+The [Mintlify CLI documentation](https://www.mintlify.com/docs/cli/install) provides installation and troubleshooting details.

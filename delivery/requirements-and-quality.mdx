@@ -1,0 +1,53 @@
+---
+title: "Requirements and quality"
+description: "Make business rules testable and protect the workflows that matter."
+icon: "list-check"
+---
+
+An implementable requirement explains the user, outcome, rule, and verification. Screens alone do not explain a business process.
+
+## Definition of ready
+
+- User and outcome are clear.
+- Actors, tenant boundaries, and permissions are identified.
+- Inputs, validation, transitions, and failures are described.
+- Data ownership, dependencies, and sample records are available.
+- Acceptance criteria cover normal and important exception paths.
+- Scope and the person who can answer business questions are recorded.
+
+## Example: approve an expense
+
+| Scenario | Acceptance criterion |
+| --- | --- |
+| Authorized approver accepts a submitted claim | Status changes once; approver, time, and decision are recorded |
+| Employee tries to approve their own claim without permission | Rejected; claim remains unchanged |
+| Approval is retried after a timeout | No second payment or approval event |
+| Receipt or required detail is missing | Correction reason is visible; claim remains reviewable |
+| Claim is approved but unpaid | Approval and payment status remain distinct |
+
+Actual approval permissions and eligibility come from the approved project rules.
+
+## Verify at the right level
+
+| Check | What it proves |
+| --- | --- |
+| Business-rule/unit checks | Calculations, eligibility, transitions |
+| API/integration checks | Authorization, validation, persistence, transactions |
+| End-to-end checks | A user can complete the process across screens and services |
+| Concurrency and retry checks | Repeated or overlapping actions preserve invariants |
+| Usability and accessibility review | Users can navigate and recover from errors |
+| Operational checks | Logs, alerts, migrations, and recovery support the release |
+
+Select coverage by risk. Stock, money, rewards, permissions, and bulk changes deserve explicit failure and concurrency scenarios.
+
+## Definition of done
+
+- Acceptance criteria are demonstrated.
+- Relevant checks pass; a reviewer has assessed the change.
+- Authorization, tenant isolation, and data integrity are verified.
+- Loading, empty, failure, and retry states are covered where relevant.
+- Migrations and compatibility impacts are understood.
+- Documentation, support notes, and recovery guidance are updated.
+- Open defects and accepted risks have owners.
+
+QA supplies evidence and a recommendation. The authorized release owner decides whether remaining risk is acceptable under project release rules.

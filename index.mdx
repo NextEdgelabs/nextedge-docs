@@ -1,20 +1,54 @@
 ---
-title: "Introduction"
-description: "Welcome to your project"
+title: "The NextEdge handbook"
+description: "Understand the business, join the team, and build software that improves everyday operations."
+icon: "book-open"
 ---
 
-Write a short description of your product here. What it does, who it's for, and what they can accomplish with it.
+NextEdge is an IT services company with eight years of experience building ERP systems and mobile applications for businesses. Our work connects people on the ground with managers and decision makers, reduces repetitive work, and makes operations easier to track.
 
-<Tip>
-  Ready to make this your own? Start by editing this page. Update your `docs.json` file to customize your site. Then fill out the [Quickstart](/quickstart) page.
-</Tip>
+This handbook gives you a shared starting point: what we build, how teams work together, how you get started, and the engineering decisions behind our products.
 
-<Card title="Quickstart" icon="rocket" href="/quickstart">
-  This card links to the quickstart page in your project.
-</Card>
-<Card title="Components" icon="puzzle-piece" href="https://mintlify.com/docs/components">
-  Add cards, callouts, steps, tabs, and more to design and structure your pages.
-</Card>
-<Card title="Settings" icon="gear" href="https://mintlify.com/docs/organize/settings">
-  Set your site name, branding, and navigation in the `docs.json` file.
-</Card>
+<Info>
+  **Edition 1 · 13 October 2026.** Company background and technology direction come from the founding brief. Organization roles, delivery practices, and onboarding checkpoints are proposed operating guidelines for adoption. Named owners and employment policies must be confirmed through the [owner register](/reference/handbook-governance).
+</Info>
+
+## Find your starting point
+
+<Columns cols={2}>
+  <Card title="Join the team" icon="handshake" href="/onboarding/journey">
+    Follow the first-day, first-week, and 30/60/90-day onboarding path.
+  </Card>
+  <Card title="Understand the company" icon="building" href="/company/overview">
+    Learn our business, domains, and the outcomes our customers need.
+  </Card>
+  <Card title="Know who owns what" icon="sitemap" href="/company/organization">
+    Understand functions, project teams, decisions, and escalation.
+  </Card>
+  <Card title="Explore the architecture" icon="layer-group" href="/engineering/architecture">
+    See how TypeScript, Next.js, Node.js, and MongoDB fit together.
+  </Card>
+</Columns>
+
+## How the handbook fits together
+
+```mermaid
+flowchart TB
+  A["Understand NextEdge"] --> B["Join and get access"]
+  B --> C["Learn your role and domain"]
+  C --> D["Deliver with the team"]
+  D --> E["Operate and improve"]
+  E --> F["Update the handbook"]
+  F --> C
+```
+
+| Section | What you will find | Who should read it |
+| --- | --- | --- |
+| Company handbook | Business context, organization, onboarding, working practices, domain guides | Everyone |
+| Engineering | Architecture, data, APIs, web/mobile, testing, releases, security | Engineers, QA, technical delivery |
+| Reference | Reusable templates, glossary, ownership and maintenance | Everyone |
+
+## What good work looks like
+
+Understand the workflow before automating it. Make the next action clear to the person doing the work. Protect business records. Make exceptions visible. Measure whether the change reduced effort or improved accuracy, then use that evidence to improve the next release.
+
+Start with the [company overview](/company/overview), then open your [onboarding journey](/onboarding/journey).

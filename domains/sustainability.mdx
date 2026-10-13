@@ -1,0 +1,48 @@
+---
+title: "Urban sustainability and waste operations"
+description: "Model field execution, evidence, and exceptions for city operations."
+icon: "leaf"
+---
+
+NextEdge's domain experience includes urban city waste management and sustainability. The core product challenge is connecting work performed on the ground with a reliable operational view.
+
+## Example operating flow
+
+This is an illustrative workflow to validate during discovery, not a claim about any particular deployment.
+
+```mermaid
+flowchart TB
+  A["Plan area, route or task"] --> B["Assign field team"]
+  B --> C["Record activity and required evidence"]
+  C --> D{"Completed as expected?"}
+  D -->|Yes| E["Supervisor verifies where required"]
+  D -->|No| F["Capture exception and reason"]
+  F --> G["Reassign or resolve"]
+  G --> C
+  E --> H["Update operational reporting"]
+```
+
+## Actors and records to clarify
+
+| Actor | Questions to answer |
+| --- | --- |
+| Field worker | What can be captured offline? What evidence is necessary? |
+| Supervisor | Which records need verification? How are missed tasks reassigned? |
+| Operations manager | Which areas, tasks, and exceptions need action? |
+| Reporting stakeholder | What definitions and evidence support each reported metric? |
+
+Potential records include areas, assignments, activities, timestamps, evidence references, quantities, verification decisions, and exceptions. Agree units and measurement methods before aggregating quantities.
+
+## Acceptance checks
+
+- A task saved offline is not shown as server-verified.
+- A repeated upload does not count the same activity twice.
+- Evidence is linked to the correct assignment and access boundary.
+- Corrections retain the earlier record and reason.
+- Dashboard totals distinguish planned, reported, verified, and unresolved work.
+
+Do not infer environmental outcomes from task completion alone. Any sustainability metric needs an agreed definition, data source, and verification method.
+
+## Useful measures
+
+Discuss assignment completion, unresolved exceptions, verification delay, sync failures, and coverage gaps. Define the reporting period, timezone, and denominator so the measures remain comparable.

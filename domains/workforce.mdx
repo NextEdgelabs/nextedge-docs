@@ -1,0 +1,48 @@
+---
+title: "Workforce and internal operations"
+description: "Connect ground teams, approval workflows, and management reporting."
+icon: "people-group"
+---
+
+Workforce systems help businesses connect ground activity with management. The company brief includes attendance, tracking, expenses, and broader internal operations.
+
+This page is a product design guide. [Everyday operations](/company/everyday-operations) explains how teammates should use approved NextEdge processes.
+
+## A common workflow
+
+```mermaid
+flowchart TB
+  A["Employee or field worker submits record"] --> B["Validate identity, assignment and inputs"]
+  B --> C["Store submitted state"]
+  C --> D{"Approval required?"}
+  D -->|No| E["Update operational view"]
+  D -->|Yes| F["Authorized manager reviews"]
+  F --> G{"Decision"}
+  G -->|Correction| A
+  G -->|Reject| H["Record reason and notify employee"]
+  G -->|Approve| E
+  E --> I["Finance or management follow-up"]
+```
+
+## Keep related workflows distinct
+
+| Workflow | Important distinction |
+| --- | --- |
+| Attendance | Recorded presence, correction request, and approved correction |
+| Field activity | Assignment, reported progress, evidence, and verified completion |
+| Expense | Submitted, approved, processed, and paid |
+| Leave | Request, decision, and effect on availability under approved rules |
+| Management reporting | Aggregated outcomes versus individual source records |
+
+## Design checks
+
+- An employee cannot access another tenant's or unauthorized colleague's records.
+- A manager only approves records within their authorized scope.
+- A user cannot approve their own request unless the approved rules explicitly permit it.
+- Offline submissions and repeated syncs do not duplicate records.
+- Corrections retain the original event and the reason for change.
+- Location and evidence access are limited to the agreed purpose.
+
+Ask the customer to define retention, visibility, working-day boundaries, overnight shifts, timezone behavior, and delegated approvals. Do not embed assumptions about employment rules in code.
+
+Reports should distinguish missing data from zero activity. Management should be able to identify the source and freshness of a metric before acting on it.

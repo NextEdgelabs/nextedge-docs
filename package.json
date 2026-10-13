@@ -1,0 +1,18 @@
+{
+  "name": "nextedge-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NextEdge documentation powered by Mintlify",
+  "scripts": {
+    "dev": "mint dev --port 3333 --no-open",
+    "validate": "mint validate",
+    "check:links": "mint broken-links",
+    "format": "mint format"
+  },
+  "engines": {
+    "node": ">=20.17.0 <25"
+  },
+  "devDependencies": {
+    "mint": "4.2.1018"
+  }
+}

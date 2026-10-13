@@ -1,0 +1,46 @@
+---
+title: "Write and review handbook pages"
+description: "Keep guidance practical, diagrammed, accurate, and easy to find."
+icon: "pen-to-square"
+---
+
+## Create a page
+
+Add an `.mdx` file with a title and description. For example, create `guides/first-guide.mdx`:
+
+```mdx
+---
+title: "Your first guide"
+description: "Describe what the reader will accomplish."
+---
+
+## Before you begin
+
+List the requirements, then explain each step.
+```
+
+## Add it to navigation
+
+Add `guides/first-guide` to the appropriate `pages` array in `docs.json`. Page paths do not include the `.mdx` extension.
+
+## Keep guidance useful
+
+- Explain the reader's goal before describing the steps.
+- Include working examples and their expected results.
+- Use relative links to connect related documentation.
+- Verify product behavior before adding claims or API details.
+- Keep passwords, API keys, and customer information out of documentation files.
+
+## Draw the workflow
+
+Use a Mermaid flowchart for a process, a sequence diagram for interactions, or a state diagram for permitted transitions. Explain what the diagram represents and whether it is a proposed design or a verified implementation.
+
+Use short labels and keep the main path readable on a narrow screen. Show important exception paths. Pair the diagram with an ownership or acceptance table when that helps the reader act on it.
+
+## Confirm the status
+
+Separate confirmed facts from recommended practice. Do not turn a proposed role into an asserted reporting line or invent an employment policy. Link the relevant source or record an open decision in [handbook ownership](/reference/handbook-governance).
+
+## Preview and check
+
+Run `npm run dev` while editing. Before sharing changes, run `npm run validate` and `npm run check:links`.

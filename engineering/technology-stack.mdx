@@ -1,0 +1,45 @@
+---
+title: "Why this technology stack"
+description: "The benefits, tradeoffs, and working rules behind our core technology choices."
+icon: "code"
+---
+
+Choose tools for the team and workflow you have. Our stated direction favors quick setup, shared language, and an architecture that can evolve with changing business requirements.
+
+| Technology | Why it fits the direction | Tradeoff to manage |
+| --- | --- | --- |
+| TypeScript | Shared language across web and backend; explicit contracts support handoffs | Types disappear at runtime; validate external input |
+| Node.js | Familiar JavaScript ecosystem and a common backend runtime | CPU-heavy or blocking work can delay other requests |
+| Next.js | React framework supporting server rendering, client interaction, and regeneration | Caching and server/client boundaries need deliberate choices |
+| Hono or Express | HTTP routing and middleware around business use cases | Framework choice does not provide business authorization or data integrity |
+| MongoDB | Flexible document models support changing workflows | Validation, query design, indexes, and migrations still require discipline |
+
+## Node.js
+
+Node.js suits I/O-oriented application work and lets JavaScript/TypeScript contributors adopt backend responsibilities. Keep request handlers focused. Move expensive report generation, imports, or CPU-heavy transformations to an appropriate worker design.
+
+The [Node.js event-loop guidance](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop) explains how long-running callbacks and blocking operations affect other requests.
+
+## Hono and Express
+
+Use the framework already selected by the project. For a new project, the technical owner records a choice based on runtime needs, team experience, middleware, observability, and maintenance.
+
+[Hono](https://hono.dev/docs) centers on Web Standards. [Express](https://expressjs.com/) provides a routing and middleware model for Node.js. Neither choice is a reason to duplicate the business layer. Keep use cases independent of request/response objects.
+
+Do not mix frameworks within one API without a documented reason and a clear ownership boundary.
+
+## Next.js and React
+
+Next.js supports server and client component composition. Server Components can keep server-side data work away from the browser; Client Components handle interaction and browser APIs. This boundary is different from deciding whether a page is rendered per request or cached. See the [official component guide](https://nextjs.org/docs/app/getting-started/server-and-client-components).
+
+Use the [web and mobile guide](/engineering/web-and-mobile) to choose rendering and cache behavior by data sensitivity and freshness.
+
+## MongoDB
+
+Flexible documents help a team adapt the model as domain understanding improves. Flexibility does not eliminate schema design, relationships, validation, or data migration. Horizontal scaling is available through sharding, but depends on data distribution and operational design.
+
+Read [data and MongoDB](/engineering/data-and-mongodb) before changing persistent records.
+
+## Record deviations
+
+Use an [architecture decision record](/reference/templates) for a new framework, database, major integration, or service boundary. State the problem, alternatives, tradeoff, owner, and conditions for revisiting the decision.
