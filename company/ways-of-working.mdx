@@ -4,7 +4,7 @@ description: "Keep work, decisions, feedback, and customer commitments visible."
 icon: "people-group"
 ---
 
-Use a shared work tracker for the plan, a written record for decisions, and a conversation when a quick clarification can prevent rework. Your delivery owner supplies the actual tools and communication channels.
+Use a shared work tracker for the plan, a written record for decisions, and a conversation when a quick clarification can prevent rework. Submit all change requests and requests for new changes through [support@nextlabsonline.com](mailto:support@nextlabsonline.com). Your delivery owner supplies the project tracker and team communication channels.
 
 ## Make a useful work item
 
@@ -31,13 +31,16 @@ This is a starting cadence. Delivery adjusts it for the project and records the 
 
 ## Handle a change in scope
 
+First record the request through the [support email intake](/company/ways-of-working#submit-and-track-a-change-request), whether it is within scope or potentially out of scope.
+
 Compare every new request with the agreed project scope. A new feature, integration, report, workflow, or material change to accepted requirements may be out of scope. If the boundary is unclear, delivery records the question and seeks a decision before implementation.
 
 **The Founder/Product Owner must approve out-of-scope work and its financial and billing terms in writing before the team commits to or starts the additional work.** Customer interest, a technical estimate, or a delivery discussion does not replace this approval.
 
 ```mermaid
 flowchart TB
-  A["New request"] --> B["Clarify outcome and impact"]
+  A["Email request to support@nextlabsonline.com"] --> R["Record email or ticket reference and owner"]
+  R --> B["Clarify outcome and impact"]
   B --> C{"Within agreed scope?"}
   C -->|Yes| D["Delivery reprioritizes with team"]
   C -->|No or unclear| E["Record change, estimate and billing proposal"]
@@ -53,6 +56,26 @@ flowchart TB
   L --> M["Finance follows approved billing or no-charge decision"]
 ```
 
+## Submit and track a change request
+
+**All change requests and requests for new changes must come through [support@nextlabsonline.com](mailto:support@nextlabsonline.com) before they enter implementation.** This keeps the original request, clarifications, decisions, and delivery history available for future reference.
+
+If a request begins in a call, meeting, chat, or direct message, ask the requester to email it or capture the agreed request in an email to the support address. Link that email thread and any assigned ticket reference to the project work item.
+
+| Include in the request | What to provide |
+| --- | --- |
+| Project or product | Customer/project context and affected module |
+| Requested change | Current behavior, desired behavior, and business reason |
+| Impact | Affected users, urgency, and requested date with its reason |
+| Supporting context | Sanitized examples, screenshots, or links where useful |
+| Follow-up | Requester and the existing email/ticket reference for related work |
+
+The support/delivery owner records the request, assigns an owner, and routes scope clarification. Keep clarifications, estimates, approvals, customer agreement, and status updates traceable to the same reference. Link implementation, test evidence, release, and billing records where applicable; record the outcome before closing the request.
+
+Email intake records the request. It does not approve the work or commit to a delivery date. Out-of-scope work still requires the Founder/Product Owner approval below.
+
+Use the [change intake template](/reference/templates#change-request-intake). Report urgent incidents through the [incident route](/engineering/releases-and-incidents#incident-flow) immediately; record resulting change requests through the support mailbox.
+
 ## Out-of-scope finance and billing approval
 
 Delivery coordinates the change request. Engineering estimates effort, dependencies, and risk. Finance prepares or checks the financial and billing proposal. The Founder/Product Owner makes the approval decision.
@@ -66,7 +89,7 @@ Delivery coordinates the change request. Engineering estimates effort, dependenc
 | Decision | Approved, rejected, deferred, or returned for clarification; approver, date, and written reference |
 | Customer agreement | Confirmation of the approved change and commercial terms before work begins |
 
-Keep written approval and commercial details in the restricted project record. Link that reference from the work item. A no-charge change still needs Founder/Product Owner approval because it consumes capacity and affects delivery.
+Keep written approval and commercial details in the restricted project record. Link that reference from the work item and originating support email/ticket. A no-charge change still needs Founder/Product Owner approval because it consumes capacity and affects delivery.
 
 Finance prepares and processes billing against the approved change; it does not independently authorize extra work, a discount, or a billing waiver. If scope, price, or billing terms change after approval, return the revised request to the Founder/Product Owner before proceeding.
 
