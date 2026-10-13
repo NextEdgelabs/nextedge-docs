@@ -29,7 +29,7 @@ Use the fallback port printed by the CLI if 3333 is occupied.
 | onboarding/ | Joiner journey, access, role-specific learning |
 | delivery/ | Project lifecycle, requirements, quality |
 | support/ | Support cycle, P0–P4 SLA targets, recovery, escalation, closure |
-| domains/ | Sustainability, pharma, Hoisst ERP, workforce, loyalty |
+| domains/ | Sustainability, Pharma ERP with membership/loyalty, Food and beverages ERP, core banking, and supporting workforce operations |
 | engineering/ | Architecture, stack, data, APIs, web/mobile, security, releases |
 | reference/ | Templates, glossary, handbook ownership |
 | guides/ | Writing and publishing instructions |

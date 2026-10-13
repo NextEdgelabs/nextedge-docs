@@ -1,10 +1,12 @@
 ---
-title: "Membership, milestones, and rewards"
-description: "Design a traceable loyalty lifecycle, including spin-the-wheel experiences."
+title: "Membership and loyalty"
+description: "The Pharma ERP module for memberships, milestone programs, and spin-the-wheel rewards."
 icon: "gift"
 ---
 
-Loyalty can combine membership benefits, milestone achievements, and reward experiences such as spin the wheel. Keep membership status, eligibility, reward allocation, and redemption separate so each can be explained and audited.
+Membership and loyalty belong to [Pharma ERP](/domains/pharma-erp). The module combines stockist membership benefits, milestone-based programs, and spin-the-wheel reward experiences. Keep membership status, qualifying activity, eligibility, allocation, fulfillment, and redemption separate so each can be explained and audited.
+
+The reviewed distribution project includes membership/program rules, loyalty records, spin-wheel handling, and related support ticket context. Configured rules may consider membership tier, stockist scope, verified receipts, overdue amounts, or payment timing. Confirm which rules apply to the assigned program.
 
 ## Loyalty lifecycle
 
@@ -25,8 +27,8 @@ flowchart TB
 
 ```mermaid
 sequenceDiagram
-  participant U as Member app
-  participant A as Authorized API
+  participant U as Stockist portal
+  participant A as Pharma ERP API
   participant D as Reward records
   U->>A: Request spin with stable request ID
   A->>A: Authenticate and check eligibility
@@ -38,7 +40,7 @@ sequenceDiagram
   A-->>U: Return original result
 ```
 
-This is a target design, not a description of an inspected implementation. Use atomic state changes and uniqueness constraints appropriate to the data model.
+This sequence is the recommended integrity model, not a statement that every project version implements it identically. Use atomic state changes and uniqueness constraints appropriate to the data model.
 
 ## Program rules to agree
 
@@ -50,6 +52,12 @@ This is a target design, not a description of an inspected implementation. Use a
 | Spin | Who is eligible, how often, and which reward inventory applies? |
 | Redemption | Where, when, and by whom can a benefit be redeemed? |
 | Reversal | What happens after fraud, cancellation, or an incorrect award? |
+
+## Link back to Pharma ERP records
+
+Define the qualifying source event before awarding progress. An order placed, goods dispatched, payment submitted, and funds verified are different events. Use the approved program rule to determine which event qualifies.
+
+Preserve references to the stockist, source transaction, rule version, period, milestone, reward, and any reversal. A returned order, reversed receipt, or rejected payment must follow the program's correction rule without creating duplicate awards.
 
 The server determines and stores the reward outcome. The animation displays that outcome. Do not let a client-provided reward ID or a visual result allocate value.
 

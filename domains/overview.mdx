@@ -6,15 +6,37 @@ icon: "industry"
 
 Every domain has its own vocabulary, but the same questions recur: who initiates the work, who can approve it, which records change, and how does an exception reach the right person?
 
-These playbooks are starting points for discovery and onboarding. The company has worked in urban sustainability, pharma demand operations, and food and beverages through Hoisst ERP. Workforce and loyalty playbooks describe cross-cutting capabilities from the company brief.
+Organize the portfolio by business domain: **urban sustainability and waste management**, **Pharma ERP**, **Food and beverages ERP**, and **core banking**. Workforce operations support the relevant domain workflows. Membership, milestone programs, and spin-the-wheel loyalty are modules of Pharma ERP.
+
+The module maps reflect the reviewed distribution, field-force, food ERP, municipal operations, and banking project references. They guide onboarding and discovery; confirm implementation and release status in the assigned project.
+
+## Domain map
+
+```mermaid
+flowchart LR
+  A["NextEdge business domains"] --> S["Urban sustainability and waste management"]
+  A --> P["Pharma ERP"]
+  A --> F["Food and beverages ERP"]
+  A --> B["Core banking"]
+  P --> D["Distribution and fulfillment"]
+  P --> E["Field-force and sales operations"]
+  P --> L["Membership and loyalty"]
+```
+
+## Business domain guides
 
 <Columns cols={2}>
   <Card title="Urban sustainability" icon="leaf" href="/domains/sustainability">Connect ground activity, evidence, exceptions, and management visibility.</Card>
-  <Card title="Pharma demand operations" icon="boxes-stacked" href="/domains/pharma">Understand demand, orders, allocation, fulfillment, and reconciliation.</Card>
-  <Card title="Hoisst ERP" icon="utensils" href="/domains/hoisst-erp">Follow POS, inventory, factory orders, and financial records.</Card>
-  <Card title="Workforce operations" icon="people-group" href="/domains/workforce">Model attendance, field work, approvals, expenses, and reporting.</Card>
-  <Card title="Membership and loyalty" icon="gift" href="/domains/loyalty">Design memberships, milestones, reward allocation, and redemption.</Card>
+  <Card title="Pharma ERP" icon="boxes-stacked" href="/domains/pharma-erp">Connect distribution, collections, field-force work, membership, and loyalty.</Card>
+  <Card title="Food and beverages ERP" icon="utensils" href="/domains/food-and-beverages-erp">Follow POS, inventory, procurement, production, and financial records.</Card>
+  <Card title="Core banking" icon="building-columns" href="/domains/core-banking">Understand customers, accounts, deposits, loans, transactions, and control workflows.</Card>
 </Columns>
+
+## Supporting capabilities
+
+[Workforce operations](/domains/workforce) cover attendance, field activity, approvals, expenses, and reporting across relevant projects. They are supporting workflows rather than a substitute for the business domain.
+
+For membership and rewards, start with [Pharma ERP](/domains/pharma-erp), then read its [membership and loyalty module](/domains/pharma-erp/membership-and-loyalty).
 
 ## Start every walkthrough with these questions
 

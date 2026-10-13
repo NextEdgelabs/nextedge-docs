@@ -8,7 +8,8 @@ Use the official Mintlify authoring skill for component and configuration change
 
 ## Content and terminology
 
-- Use NextEdge for the company and Hoisst ERP for the food and beverages ERP context.
+- Use NextEdge for the company, Food and beverages ERP for that business domain, and Pharma ERP for the pharma business domain.
+- Membership, milestone programs, and spin-the-wheel loyalty belong under Pharma ERP. Core banking is a separate domain; workforce operations are shared supporting capabilities.
 - Write practical guidance for new joiners and existing teammates.
 - Separate confirmed company facts from proposed organization roles and practices.
 - Do not invent employee names, reporting lines, benefit amounts, approval limits, SLAs, customer metrics, or deployed features.

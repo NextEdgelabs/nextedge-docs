@@ -8,11 +8,17 @@
     "light": "#60A5FA",
     "dark": "#1D4ED8"
   },
-  "logo": { "light": "/logo/light.svg", "dark": "/logo/dark.svg" },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "favicon": "/favicon.svg",
   "navbar": {
     "links": [
-      { "label": "Support", "href": "mailto:support@nextlabsonline.com" }
+      {
+        "label": "Support",
+        "href": "mailto:support@nextlabsonline.com"
+      }
     ]
   },
   "navigation": {
@@ -20,29 +26,123 @@
       {
         "tab": "Company handbook",
         "groups": [
-          { "group": "Welcome", "pages": ["index", "company/overview"] },
-          { "group": "People and organization", "pages": ["company/organization", "company/ways-of-working", "company/everyday-operations"] },
-          { "group": "Onboarding", "pages": ["onboarding/journey", "onboarding/access-and-setup", "onboarding/role-paths"] },
-          { "group": "Delivering work", "pages": ["delivery/lifecycle", "delivery/requirements-and-quality"] },
-          { "group": "Support and service levels", "pages": ["support/cycle-and-sla"] },
-          { "group": "Domain playbooks", "pages": ["domains/overview", "domains/sustainability", "domains/pharma", "domains/hoisst-erp", "domains/workforce", "domains/loyalty"] }
+          {
+            "group": "Welcome",
+            "pages": [
+              "index",
+              "company/overview"
+            ]
+          },
+          {
+            "group": "People and organization",
+            "pages": [
+              "company/organization",
+              "company/ways-of-working",
+              "company/everyday-operations"
+            ]
+          },
+          {
+            "group": "Onboarding",
+            "pages": [
+              "onboarding/journey",
+              "onboarding/access-and-setup",
+              "onboarding/role-paths"
+            ]
+          },
+          {
+            "group": "Delivering work",
+            "pages": [
+              "delivery/lifecycle",
+              "delivery/requirements-and-quality"
+            ]
+          },
+          {
+            "group": "Support and service levels",
+            "pages": [
+              "support/cycle-and-sla"
+            ]
+          },
+          {
+            "group": "Domain playbooks",
+            "pages": [
+              "domains/overview",
+              "domains/sustainability",
+              {
+                "group": "Pharma ERP",
+                "pages": [
+                  "domains/pharma-erp",
+                  "domains/pharma-erp/membership-and-loyalty"
+                ]
+              },
+              "domains/food-and-beverages-erp",
+              "domains/core-banking",
+              "domains/workforce"
+            ]
+          }
         ]
       },
       {
         "tab": "Engineering",
         "groups": [
-          { "group": "Architecture and stack", "pages": ["engineering/architecture", "engineering/technology-stack"] },
-          { "group": "Build reliable workflows", "pages": ["engineering/data-and-mongodb", "engineering/api-and-modules", "engineering/web-and-mobile"] },
-          { "group": "Operate safely", "pages": ["engineering/security-and-access", "engineering/releases-and-incidents"] }
+          {
+            "group": "Architecture and stack",
+            "pages": [
+              "engineering/architecture",
+              "engineering/technology-stack"
+            ]
+          },
+          {
+            "group": "Build reliable workflows",
+            "pages": [
+              "engineering/data-and-mongodb",
+              "engineering/api-and-modules",
+              "engineering/web-and-mobile"
+            ]
+          },
+          {
+            "group": "Operate safely",
+            "pages": [
+              "engineering/security-and-access",
+              "engineering/releases-and-incidents"
+            ]
+          }
         ]
       },
       {
         "tab": "Reference",
         "groups": [
-          { "group": "Working references", "pages": ["reference/templates", "reference/glossary", "reference/handbook-governance"] },
-          { "group": "Maintain this handbook", "pages": ["quickstart", "guides/writing", "guides/publishing"] }
+          {
+            "group": "Working references",
+            "pages": [
+              "reference/templates",
+              "reference/glossary",
+              "reference/handbook-governance"
+            ]
+          },
+          {
+            "group": "Maintain this handbook",
+            "pages": [
+              "quickstart",
+              "guides/writing",
+              "guides/publishing"
+            ]
+          }
         ]
       }
     ]
-  }
+  },
+  "redirects": [
+    {
+      "source": "/domains/hoisst-erp",
+      "destination": "/domains/food-and-beverages-erp"
+    },
+    {
+      "source": "/domains/pharma",
+      "destination": "/domains/pharma-erp"
+    },
+    {
+      "source": "/domains/loyalty",
+      "destination": "/domains/pharma-erp/membership-and-loyalty"
+    }
+  ]
 }

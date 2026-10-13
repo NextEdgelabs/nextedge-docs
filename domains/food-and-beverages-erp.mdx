@@ -1,12 +1,12 @@
 ---
-title: "Hoisst ERP: food and beverages"
-description: "Connect POS, inventory, factory orders, and financial visibility."
+title: "Food and beverages ERP"
+description: "Connect POS, purchasing, inventory, production, workforce operations, and financial visibility."
 icon: "utensils"
 ---
 
-Hoisst ERP is our food and beverages ERP context. It brings POS, inventory, factory order management, finance, and related operational needs into a connected business workflow.
+Food and beverages ERP connects outlet sales with purchasing, stock, kitchen or factory production, finance, and operational management.
 
-The map below organizes those concerns for onboarding and design. Confirm the modules and integrations present in the assigned project before using it as a feature inventory.
+The reviewed project contains business/brand/outlet structures, menu and order handling, billing, shifts, inventory, procurement, production, attendance, and payroll setup modules. The map below consolidates those concerns for onboarding. Confirm each module's enabled features and release status in the assigned project.
 
 ## Operational map
 
@@ -34,7 +34,9 @@ flowchart TB
 | Inventory | Stock movements, units, locations, reservations, adjustments |
 | Factory orders | Demand, production status, quantities, dispatch, receipt |
 | Purchasing | Supplier orders, receipts, discrepancies, related costs |
+| Production and recipes | Ingredient units, recipes, material requests/issues, production execution, consumption, and wastage |
 | Finance | Traceable sales, payments, expenses, settlements, reconciliation |
+| Outlet and workforce operations | Business/brand/outlet roles, shifts, staff attendance, and payroll setup where configured |
 | Management reporting | Operational and financial views using agreed definitions |
 
 ## Follow one sale
@@ -53,3 +55,7 @@ For factory workflows, trace demand through the order, production or procurement
 - Reports reconcile with the underlying movement and transaction records.
 
 Do not silently edit settled financial history or overwrite stock balances to hide a discrepancy. Use a recorded adjustment, reversal, or reconciliation workflow approved for that project.
+
+## Domain boundary
+
+Restaurant billing, tender records, supplier costs, and financial reporting belong to the ERP workflow. The [core banking module](/domains/core-banking) is a separate business domain covering banking account and transaction lifecycles.

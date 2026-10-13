@@ -6,14 +6,28 @@ icon: "leaf"
 
 NextEdge's domain experience includes urban city waste management and sustainability. The core product challenge is connecting work performed on the ground with a reliable operational view.
 
+The reviewed municipal field applications cover area/society onboarding, household or property records, QR-code handover, segregation scanning, field collection/logistics roles, supervisor views, complaints, and offline capture/sync. Confirm the enabled workflows in the assigned project.
+
+## Module map
+
+| Area | What the team needs to understand |
+| --- | --- |
+| Municipal setup | Areas, societies, properties, assignments, and role scope |
+| QR onboarding | Generate, hand over, place, and verify codes linked to the right record |
+| Field collection | Scan assigned properties or societies and record segregation/collection activity |
+| Logistics | Assigned routes, pickup points, vehicle activity, and operational exceptions where enabled |
+| Supervision | Review coverage, resolve complaints, and manage assigned areas |
+| Offline capture | Persist pending records locally and sync them without duplication |
+
 ## Example operating flow
 
 This is an illustrative workflow to validate during discovery, not a claim about any particular deployment.
 
 ```mermaid
 flowchart TB
-  A["Plan area, route or task"] --> B["Assign field team"]
-  B --> C["Record activity and required evidence"]
+  A["Onboard area, society and properties"] --> Q["Verify QR-code placement and handover"]
+  Q --> B["Assign field team, route or task"]
+  B --> C["Scan and record segregation or collection activity"]
   C --> D{"Completed as expected?"}
   D -->|Yes| E["Supervisor verifies where required"]
   D -->|No| F["Capture exception and reason"]
