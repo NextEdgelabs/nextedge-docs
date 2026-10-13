@@ -1,9 +1,9 @@
 ---
 title: "Module register"
-description: "Review 32 proposed modules and their relationship to applications and offerings."
+description: "Review 35 proposed modules and their relationship to applications and offerings."
 ---
 
-**Review draft.** This is a new-project requirement register, not a completion report. All 32 modules are proposed for Banking. Legacy reuse is assessed separately on the [gap page](/banking/current-system-gap).
+**Review draft.** This is a new-project requirement register, not a completion report. All 35 modules are proposed for Banking. Legacy reuse is assessed separately on the [gap page](/banking/current-system-gap).
 
 | Module | Purpose | Family |
 | --- | --- | --- |
@@ -39,8 +39,11 @@ description: "Review 32 proposed modules and their relationship to applications 
 | [B30 Banking APIs integration and data health](/banking/modules/b30) | Expose stable APIs and reconcile external facts without confusing transport success with banking execution. | control |
 | [B31 Business date EOD and scheduled operations](/banking/modules/b31) | Run financial and operational cycles exactly once per institution business date with controlled restart. | control |
 | [B32 Security audit deployment and resilience](/banking/modules/b32) | Prove the release protects bank data and can be operated, recovered and audited. | control |
+| [B33 Cheque operations and clearing](/banking/modules/b33) | Manage cheque books, instruments, clearing and returns with linked financial evidence. | core |
+| [B34 Approvals limits and operational controls](/banking/modules/b34) | Apply cross-channel approval and aggregate controls before a financial or sensitive administrative action can execute. | control |
+| [B35 Customer digital identity and security](/banking/modules/b35) | Verify customer access to products and secure web/mobile sessions without treating staff access as customer authority. | core |
 
-Each module includes required features, configuration, two end-to-end journeys, data dependencies, existing-system evidence, difficult cases and a pending decision. Module IDs B01–B32 belong only to the new Banking project; legacy M01–M23 remain unchanged.
+Each module includes required features, configuration, two end-to-end journeys, data dependencies, existing-system evidence, difficult cases and a pending decision. Module IDs B01–B35 belong only to the new Banking project; legacy M01–M23 remain unchanged.
 
 Do not enable every module for every institution. Use institution capability evidence, dependencies, offering terms, role permissions and channel readiness together. A lending-only NBFC, bank-issued prepaid programme and full-service bank need different configurations and financial books.
 
