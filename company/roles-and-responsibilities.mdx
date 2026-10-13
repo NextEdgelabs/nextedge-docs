@@ -8,7 +8,9 @@ NextEdge's delivery team uses six roles: Developer, Senior Developer, Product Ow
 
 Product Owner/Manager and Technical Operations manage requirements and delivery. Developers and Senior Developers focus on development, implementation, and technical support. Senior Manager (Tech/Ops) coordinates the client, support, and delivery across the team.
 
-Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer report directly to Senior Manager, Technical/Operations, shortened below to Senior Manager (Tech/Ops). Product Owner/Manager and Designer are peers. The Technical Operations team and Senior Manager (Tech/Ops) report directly to the designated Founder/CEO, SVP, or VP. Name role holders, access, and approval responsibilities in each project's [ownership record](/reference/templates#project-ownership-record).
+Technical Operations, Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer report directly to Senior Manager, Technical/Operations, shortened below to Senior Manager (Tech/Ops). Product Owner/Manager and Designer are peers. The Senior Manager reports to the designated Founder/CEO, SVP, or VP. Name role holders, access, and approval responsibilities in each project's [ownership record](/reference/templates#project-ownership-record).
+
+Use the [role operating rhythm](/company/operating-rhythm) for daily, weekly, monthly, and quarterly responsibilities, expected records, and manager reviews.
 
 ## How the roles collaborate
 
@@ -16,9 +18,10 @@ Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer r
 flowchart TB
   C["Client and business context"] <--> S["Senior Manager (Tech/Ops): client, support and delivery coordination"]
   S <--> T["Technical Operations: requirements and operational readiness"]
+  S <--> U["UI/UX/Product Designer"]
   S <--> P["Product Owner/Manager: baseline documents, tickets and delivery plan"]
   T <--> P
-  T <--> U["UI/UX/Product Designer"]
+  T <--> U
   P <--> U
   P <--> R["Senior Developer: technical planning and review"]
   R <--> D["Developer: implementation and technical support"]
@@ -106,7 +109,7 @@ Writing a requirement does not by itself finalize a business decision. Backlog p
 
 **Purpose:** connect the client's operating process with clear requirements, support triage, and delivery readiness.
 
-Report directly to the designated Founder/CEO, SVP, or VP. Coordinate delivery and support with Senior Manager (Tech/Ops); this coordination preserves the direct leadership reporting line.
+Report directly to Senior Manager, Technical/Operations only. Submit operational status, delivery risks, support trends, and decisions needed to this manager. Work with Product Owner/Manager, Designer, and engineering peers without changing the reporting line. The Senior Manager carries leadership escalation.
 
 **Own**
 
@@ -119,6 +122,23 @@ Report directly to the designated Founder/CEO, SVP, or VP. Coordinate delivery a
 - Verify that a proposed solution addresses the operating process, not only a screen or an endpoint.
 - Own QA/testing verification, UAT coordination and sign-off, and production release decisions through a named Tech Ops owner.
 - Authorize rollback/hotfix actions using Senior Developer and Senior Manager (Tech/Ops) technical input; record permission, execution, and verification.
+
+### Operational responsibility in detail
+
+| Area | What Technical Operations must do | Evidence and escalation |
+| --- | --- | --- |
+| Intake and traceability | Review support mailbox/tickets; capture project, impact, receipt time, requester, and original thread; assign or confirm the accountable ticket owner | Linked intake and work record; alert incident owners immediately for P0 and escalate unowned/at-risk work to Senior Manager |
+| Requirement clarification | Map the current and expected process, actors, states, permissions, exceptions, integrations, and examples; distinguish a defect from a changed requirement | Workflow and open-question log for PO/Manager; Senior Manager routes final requirement decisions to Founder/CEO, SVP, or VP |
+| Delivery readiness | Check approved scope, design/technical dependencies, test access, safe sample data, customer availability, and support capacity with the delivery team | Readiness checklist and dependency owners; raise missing decisions before a date is committed |
+| Testing and QA | Prepare risk-based cases against the approved baseline; verify normal and failure paths, permissions, data integrity, and affected integrations; record defects and retest fixes | Results with requirement/build references, reproducible defects, remaining risks, and named Tech Ops QA sign-off |
+| UAT and adoption | Coordinate agreed business scenarios and users; capture customer confirmation where required, rejected cases, training needs, and unresolved acceptance gaps | UAT decision and evidence; do not mark an unresolved rejection accepted |
+| Release and recovery | Review technical readiness, migration/rollback evidence, communication, coverage, and verification; named Tech Ops authority records release or recovery permission | Go/no-go decision, authorized action, executor, recovery plan, smoke checks, and reconciliation where needed; Senior Developer/Senior Manager provide technical help |
+| Support communication and closure | Keep impact, owner, next action, target, and next update visible; verify recovery/resolution before closure and link any permanent-fix work | Ticket timeline, verification, customer update/confirmation where needed, closure reason, and owned follow-up |
+| Operational improvement | Identify repeat issues, aging work, missed handoffs, training gaps, and preventable incidents; propose changes with evidence | Weekly/monthly trend summary and quarterly improvement proposal to Senior Manager; route new changes through the support mailbox |
+
+Technical Operations owns the operational verification decision. Senior Developer owns technical review; Product Owner/Manager owns the requirement record and plan. If these owners disagree about readiness, record the gap and ask Senior Manager to coordinate resolution. A deadline does not substitute for evidence or the required sign-off.
+
+Follow the [Technical Operations routine](/company/operating-rhythm#technical-operations) for daily execution and weekly, monthly, and quarterly reviews.
 
 **Hand over**
 
@@ -159,9 +179,9 @@ A prototype is not approval of a new business rule. Material changes discovered 
 
 ## Senior Manager, Technical/Operations
 
-**Purpose:** coordinate client expectations, support performance, and delivery across product, design, and development.
+**Purpose:** coordinate client expectations, support performance, and delivery across operations, product, design, and development.
 
-Report directly to the designated Founder/CEO, SVP, or VP. Manage the four direct-report roles and coordinate with the Technical Operations team.
+Report to the designated Founder/CEO, SVP, or VP. Manage all five direct-report roles, including the Technical Operations team, and consolidate their delivery and support reporting.
 
 **Own**
 
@@ -172,7 +192,7 @@ Report directly to the designated Founder/CEO, SVP, or VP. Manage the four direc
 - Ensure P0–P4 tickets have owners, escalation, communication, and verification.
 - Coordinate customer demonstrations, acceptance discussions, rollout, and support handover.
 - Keep scope and financial decisions traceable to the authorized approver.
-- Manage Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer as direct reports.
+- Manage Technical Operations, Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer as direct reports.
 - Provide technical recovery help with Senior Developer and coordinate an authorized alternate when a primary owner is unavailable.
 
 **Hand over**
@@ -184,7 +204,7 @@ Report directly to the designated Founder/CEO, SVP, or VP. Manage the four direc
 | Escalation and recovery coordination | Incident/technical owners and leadership | Impact, owner, target, action, dependency |
 | Customer handover | Product Owner/Manager and support team | Acceptance status, training, operational notes, follow-up |
 
-Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer report directly to Senior Manager (Tech/Ops). Product and design remain peers. Managing operations does not grant commercial approval authority. Requirement/commercial decisions remain with Founder/CEO, SVP, and VP; Tech Ops owns testing/UAT and release sign-off.
+Technical Operations, Product Owner/Manager, UI/UX/Product Designer, Senior Developer, and Developer report directly to Senior Manager (Tech/Ops). Product and design remain peers. Managing operations does not grant commercial approval authority. Requirement/commercial decisions remain with Founder/CEO, SVP, and VP; Tech Ops owns testing/UAT and release sign-off.
 
 ## The leadership interface
 
