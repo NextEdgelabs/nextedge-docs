@@ -1,0 +1,58 @@
+---
+title: "Configuration and policy model"
+description: "A controlled institution/programme/product hierarchy with dependency checks and effective versions."
+---
+
+## Configuration hierarchy
+
+1. Platform schema defines supported capabilities, supported fields and technical safety limits.
+2. Institution records legal entity/category, approved capabilities, jurisdiction, calendars and owners.
+3. Programme records issuer/lender/sponsor, processor, network and settlement/safeguarding arrangements.
+4. Product version records eligibility, economics, disclosures, limits, accounting templates and servicing rules.
+5. Customer agreement/account records the accepted terms version and permitted individual exceptions.
+6. Channel and role policy narrows actions by identity, mandate, branch, device, proof and current state.
+
+An override cannot expand an institution's legal authority or bypass immutable safety rules. Agree override precedence explicitly; reject conflicting policies rather than selecting an arbitrary value.
+
+## Policy lifecycle
+
+Draft → validated/simulated → independently approved where required → scheduled → effective → withdrawn for new business → retired after obligations complete. These are proposed states for confirmation. Record author, approver, original version, effective business timestamp, reason and affected products. Publication must be atomic with audit. Rollback creates a new approved version, not deletion.
+
+## Parameter families
+
+| Family | Examples requiring institution-approved values |
+| --- | --- |
+| Product | Currency, customer type, balance/tenor/credit eligibility, allowed ownership and channels |
+| Economics | Interest/day-count/compounding, fees, taxes, penalties, rounding, repayment waterfall |
+| Risk | Limits, exposures, velocity, allowed merchant/channel/country, restricted status |
+| Workflow | Maker/checker duties, proof, deviations, evidence, expiry, escalation and recovery |
+| Finance | Posting templates, settlement accounts, suspense, periods and valuation |
+| Servicing | Renewal, closure, refunds, disputes, maturity, overdue and reinstatement |
+| Integration | Provider/interface version, finality, callback security, status recovery |
+| Operations | Business date, job schedule, reconciliation controls, release health |
+| Security | Factors, session/device trust, recovery, secrets and retention |
+
+## Example configuration record
+
+```json
+{
+  "institutionCode": "DEMOBANK",
+  "programmeCode": "DEMO-DEBIT",
+  "productCode": "SAVINGS-DEMO",
+  "version": 1,
+  "status": "draft",
+  "currency": "INR",
+  "scale": 2,
+  "channelsProposed": ["banking-ops", "customer-web", "mobile-api", "atm"],
+  "issuerEvidenceRef": "REQUIRED-BEFORE-ACTIVATION",
+  "ledgerOwner": "DECISION-REQUIRED",
+  "pricingPolicyRef": "NOT-CONFIGURED",
+  "releaseApproved": false
+}
+```
+
+This is an illustrative requirements record, not a deployed DTO or executable provisioning command. Missing pricing, authority or books keeps financial operations unavailable.
+
+## Simulation and acceptance
+
+Simulate ordinary and boundary amounts; multiple currencies; changes at cutoff; holiday/leap day; concurrent publication; stale approval; rollback with open contracts; institution suspension and provider outage. Show the effective policy and reason when an action is denied. Preserve accepted existing agreements and explain future migration effects before publication.

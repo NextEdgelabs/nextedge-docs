@@ -139,15 +139,28 @@
         "groups": [
           {
             "group": "Start here",
-            "pages": []
+            "pages": [
+              "banking/overview",
+              "banking/module-register",
+              "banking/applications",
+              "banking/configuration"
+            ]
           },
           {
             "group": "Applications",
-            "pages": []
+            "pages": [
+              "banking/apps/super-admin",
+              "banking/apps/banking-ops",
+              "banking/apps/customer-web",
+              "banking/apps/mobile-api",
+              "banking/apps/atm"
+            ]
           },
           {
             "group": "Offerings",
-            "pages": []
+            "pages": [
+              "banking/offering-matrix"
+            ]
           },
           {
             "group": "Core and operations modules",
