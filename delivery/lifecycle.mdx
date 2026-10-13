@@ -28,7 +28,7 @@ flowchart TB
 | Stage | Lead owner | Output before moving forward |
 | --- | --- | --- |
 | Discovery | Delivery/business analysis | Workflow, actors, pain points, example records |
-| Scope | Delivery with authorized commercial owner | Boundaries, assumptions, dependencies, success measures |
+| Scope | Delivery with authorized commercial owner; Founder/Product Owner for out-of-scope changes | Boundaries, assumptions, dependencies, success measures, and approved change terms where applicable |
 | Design | Technical owner with delivery and UX responsibility | Data flow, permissions, rules, exceptions |
 | Build | Assigned contributors | Working increment and implementation evidence |
 | Verify | QA with engineering | Acceptance evidence and remaining risks |
@@ -41,6 +41,12 @@ flowchart TB
 For an order system, a first slice may capture an order, validate it, show its status, and handle rejection. Form fields without a valid saved order and permission checks are not a complete workflow.
 
 Separate **done for implementation**, **accepted by the customer**, and **released to production**. They need different evidence.
+
+## Out-of-scope changes during delivery
+
+A new request does not automatically become committed work. Follow the [scope-change approval flow](/company/ways-of-working#handle-a-change-in-scope): record the proposed change, effort and timeline impact, financial impact, and billing terms.
+
+Obtain written Founder/Product Owner approval and record customer agreement before starting the additional work. Finance bills only against the approved terms and agreed trigger or milestone. Return revised scope, pricing, or billing terms for approval; do not absorb the change silently or promise a free addition without authorization.
 
 ## Measure the result
 

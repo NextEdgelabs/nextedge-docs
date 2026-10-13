@@ -31,18 +31,46 @@ This is a starting cadence. Delivery adjusts it for the project and records the 
 
 ## Handle a change in scope
 
+Compare every new request with the agreed project scope. A new feature, integration, report, workflow, or material change to accepted requirements may be out of scope. If the boundary is unclear, delivery records the question and seeks a decision before implementation.
+
+**The Founder/Product Owner must approve out-of-scope work and its financial and billing terms in writing before the team commits to or starts the additional work.** Customer interest, a technical estimate, or a delivery discussion does not replace this approval.
+
 ```mermaid
 flowchart TB
   A["New request"] --> B["Clarify outcome and impact"]
   B --> C{"Within agreed scope?"}
   C -->|Yes| D["Delivery reprioritizes with team"]
-  C -->|No or unclear| E["Authorized owner reviews cost and timeline"]
-  E --> F["Record agreed change"]
-  F --> D
-  D --> G["Update backlog and acceptance criteria"]
+  C -->|No or unclear| E["Record change, estimate and billing proposal"]
+  E --> F["Founder/Product Owner reviews"]
+  F --> G{"Decision recorded?"}
+  G -->|Needs information| E
+  G -->|Rejected or deferred| H["Record reason and keep work on hold"]
+  G -->|Approved| I["Record scope, financial and billing approval"]
+  I --> J["Delivery confirms customer agreement"]
+  J --> K["Update scope, backlog and acceptance criteria"]
+  D --> K
+  K --> L["Deliver approved work"]
+  L --> M["Finance follows approved billing or no-charge decision"]
 ```
 
-Do not turn a conversation into an unrecorded commitment. Surface the effect on cost, timing, dependencies, and quality before promising the change.
+## Out-of-scope finance and billing approval
+
+Delivery coordinates the change request. Engineering estimates effort, dependencies, and risk. Finance prepares or checks the financial and billing proposal. The Founder/Product Owner makes the approval decision.
+
+| Approval item | What to record |
+| --- | --- |
+| Scope | Additional deliverables, exclusions, and acceptance criteria |
+| Delivery impact | Effort estimate, dependencies, and timeline changes |
+| Financial impact | Additional cost, proposed customer charge, and any discount or no-charge exception |
+| Billing terms | Billing basis, currency, invoice trigger or milestone, and payment terms |
+| Decision | Approved, rejected, deferred, or returned for clarification; approver, date, and written reference |
+| Customer agreement | Confirmation of the approved change and commercial terms before work begins |
+
+Keep written approval and commercial details in the restricted project record. Link that reference from the work item. A no-charge change still needs Founder/Product Owner approval because it consumes capacity and affects delivery.
+
+Finance prepares and processes billing against the approved change; it does not independently authorize extra work, a discount, or a billing waiver. If scope, price, or billing terms change after approval, return the revised request to the Founder/Product Owner before proceeding.
+
+Use the [change request template](/reference/templates#out-of-scope-change-request). Clarification and estimation can inform the decision; implementation remains on hold until approval and customer agreement are recorded.
 
 ## Work respectfully
 
