@@ -133,6 +133,110 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Banking review",
+        "groups": [
+          {
+            "group": "Start here",
+            "pages": [
+              "banking/overview",
+              "banking/module-register",
+              "banking/applications",
+              "banking/configuration"
+            ]
+          },
+          {
+            "group": "Applications",
+            "pages": [
+              "banking/apps/super-admin",
+              "banking/apps/banking-ops",
+              "banking/apps/customer-web",
+              "banking/apps/mobile-api",
+              "banking/apps/atm"
+            ]
+          },
+          {
+            "group": "Offerings",
+            "pages": [
+              "banking/offering-matrix",
+              "banking/offerings/bank",
+              "banking/offerings/nbfc",
+              "banking/offerings/cards",
+              "banking/examples/indian-bank",
+              "banking/examples/indian-nbfc"
+            ]
+          },
+          {
+            "group": "Core and operations modules",
+            "pages": [
+              "banking/modules/b01",
+              "banking/modules/b02",
+              "banking/modules/b03",
+              "banking/modules/b04",
+              "banking/modules/b05",
+              "banking/modules/b06",
+              "banking/modules/b07",
+              "banking/modules/b08",
+              "banking/modules/b09",
+              "banking/modules/b10",
+              "banking/modules/b11",
+              "banking/modules/b33",
+              "banking/modules/b35"
+            ]
+          },
+          {
+            "group": "Lending modules",
+            "pages": [
+              "banking/modules/b12",
+              "banking/modules/b13",
+              "banking/modules/b14",
+              "banking/modules/b15",
+              "banking/modules/b16"
+            ]
+          },
+          {
+            "group": "Cards and ATM modules",
+            "pages": [
+              "banking/modules/b17",
+              "banking/modules/b18",
+              "banking/modules/b19",
+              "banking/modules/b20",
+              "banking/modules/b21",
+              "banking/modules/b22",
+              "banking/modules/b23"
+            ]
+          },
+          {
+            "group": "Control and delivery modules",
+            "pages": [
+              "banking/modules/b24",
+              "banking/modules/b25",
+              "banking/modules/b26",
+              "banking/modules/b27",
+              "banking/modules/b28",
+              "banking/modules/b29",
+              "banking/modules/b30",
+              "banking/modules/b31",
+              "banking/modules/b32",
+              "banking/modules/b34"
+            ]
+          },
+          {
+            "group": "Review and decisions",
+            "pages": [
+              "banking/journeys",
+              "banking/scenario-matrix",
+              "banking/current-system-gap",
+              "banking/delivery-plan",
+              "banking/decisions",
+              "banking/references",
+              "banking/glossary",
+              "banking/roles-and-permissions",
+              "banking/api-and-data-contracts"
+            ]
+          }
+        ]
       }
     ]
   },

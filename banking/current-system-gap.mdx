@@ -1,0 +1,45 @@
+---
+title: "Current project gaps and reuse candidates"
+description: "Evidence-based separation between legacy features and the new Banking operating platform."
+---
+
+**Source review, 13 October 2026. No new application tests or bank operations were executed to prepare this gap assessment.**
+
+The existing workspace is `banking_app`, with separate Super Admin, Banking, Customer and shared server applications. Its 23 legacy module documents describe a mixture of bounded implementation, partial work, gaps and excluded scope. The new Banking proposal has 35 modules and a broader application/offering boundary.
+
+## Evidence inventory
+
+| Existing area | Evidence | Reuse assessment |
+| --- | --- | --- |
+| Organisation and branches | `banks`, `organization`, `staff-administration`; legacy M01 | Bounded branch/profile/contact/routing administration, not full bank commissioning/closure |
+| Staff and security | `staff`, `staff-auth`, `staff-access-requests`, `staff-sessions` | Provisioning/invitation/scope/session mechanisms; real commissioning and recovery unfinished |
+| Platform access | `auth`, `administrators`, `admin-sessions` | Existing platform identity; no blanket new-project privileged-access approval |
+| Product/configuration | `platform-configuration`, `transaction-controls`, `bank-governance` | Catalogue and saved limits, not governed pricing/enforcement/financial products |
+| Customer/account reads | `consumer-access`, `consumer-account-links`, `consumer-accounts`, `account-snapshots`, `staff-enquiry` | Synthetic/scoped access and projections; no complete KYC or customer contract |
+| Transaction history | `transaction-history`, `consumer-transactions` | Read/imported history; not an executing ledger/payment engine |
+| General support | `service-requests`, routing/ownership features, `staff-support` | Bounded processing foundation; complaints/private notes/reassignment holds remain |
+| Reports/alerts/docs | `staff-support-workload`, staff/consumer notifications, `documents` | Aggregate report/CSV, redacted alerts and private-file foundation; not financial/regulatory reporting |
+| Interfaces | `source-clients`, `source-mappings`, `source-activity`, `health` | Scoped ingestion/credentials/health; no certified financial connectors |
+| Core financial operations | No owned ledger, LOS/LMS, teller, deposit servicing, CMS, ATM or reconciliation module found | New domain implementation or contracted authoritative engine needed |
+
+## What is missing for a bank deployment
+
+1. Chosen authoritative customer/account/ledger model and complete relationships.
+2. Verified customer onboarding and approved institution-specific product policy.
+3. Exact posting, accrual, balance/hold, quote and reversal behaviour.
+4. Deposit, payment and loan instruction/status/finality interfaces or owned engines.
+5. Debit/PPI/credit issuance, processing, billing, settlement and disputes.
+6. Certified ATM/device/switch and physical-cash custody integration.
+7. Reconciliation, business-date/EOD controls and financial/regulatory records.
+8. Privileged identity commissioning, recovery, security assessment and bank-owned UAT.
+9. Data migration/control totals, capacity, restore/failover and production operating ownership.
+
+## Status interpretation
+
+All new-project modules are **proposed, not built**. Reuse candidates can reduce duplicated engineering after targeted audit; they cannot supply missing business rules or certifications. Legacy M01 is ready for local acceptance in its approved scope, not bank-wide production readiness.
+
+Some historical access documents say routes are development-only. Current `apps/server/src/app.ts` mounts implemented staff routes in production; the 12 October production-parity record supersedes those route-absence statements. Mounted endpoints still do not establish authenticated hosted acceptance, real identity or financial execution.
+
+## Review next
+
+Choose the core ownership boundary first. Then agree the first institution/offering and source contracts. Reassess each reused feature against new institution/programme/channel permissions before adopting it. Preserve existing customer data and configuration; this documentation creates no migration, deployment or silent permission changes.

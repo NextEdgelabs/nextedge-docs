@@ -1,0 +1,71 @@
+---
+title: "Scenario and combination coverage"
+description: "Risk-based coverage across institutions, products, roles, channels and failure states."
+---
+
+“All combinations” must have an explicit boundary. The full Cartesian product is large and includes prohibited combinations. This review defines dimensions, forbidden combinations, mandatory high-risk cases and a process for generating the final test catalogue after policy selection. It does not claim every permutation is implemented or tested.
+
+## Dimensions
+
+| Dimension | Values to select and test |
+| --- | --- |
+| Institution | Permitted bank category; lending NBFC; deposit-taking NBFC; authorised PPI/card issuer; sponsor/co-brand |
+| Product | Savings/current/FD/RD/overdraft; loan variants; debit/prepaid/credit; secured/unsecured/corporate/add-on |
+| Party/mandate | Individual; minor/guardian; joint; business/signatory; beneficial owner; programme cardholder |
+| Channel | Banking Ops; Customer Web; mobile API; ATM; authenticated contracted interface |
+| Authority | Maker; independent checker; viewer; assigned branch; finance/risk; issuer/lender; revoked actor |
+| State | Pending/active/restricted/dormant/closed; programme off; product version scheduled/expired |
+| Money | Zero/negative invalid; smallest unit; exact limit; above limit; insufficient funds; multi-currency/rounding |
+| Time | Quote/hold expiry; cutoff; holiday; month/year/leap day; business versus UTC date |
+| Reliability | Duplicate; concurrent; dropped response; outage; reordered event; incomplete file; failover |
+| Outcome | Rejected; pending; unknown; confirmed; returned; linked reversal; settled/reconciled |
+
+## Required acceptance catalogue
+
+| Case | Combination | Required assertion |
+| --- | --- | --- |
+| S01 | Bank A actor → Bank B list/detail/export/file | Denied without revealing Bank B data |
+| S02 | Branch A actor → unassigned branch | Denied on server, including direct URLs |
+| S03 | Customer → removed joint/business mandate | Fresh authority check blocks action |
+| S04 | Lending NBFC → savings/debit/PPI offering | Block unless separately authorised configuration exists |
+| S05 | PPI programme → prohibited funding/use | Denied despite any enabled credit module |
+| S06 | Maker also checker | Reject forbidden self-approval |
+| S07 | Terms changed after approval | Stale instruction cannot use silent new economics |
+| S08 | Two simultaneous withdrawals near balance | No overspend or duplicated financial effect |
+| S09 | Mobile offline retry | Same operation key returns same outcome |
+| S10 | API response lost after provider acceptance | Query original instruction; no blind resubmission |
+| S11 | Duplicate/out-of-order callbacks | Verify source/order; apply one valid transition |
+| S12 | Debit card blocked after authorisation | Handle later presentment under adopted network rules |
+| S13 | Partial/late card presentment | Link hold, tolerance and final posting explicitly |
+| S14 | Refund after replacement/account closure | Resolve proper original liability and servicing owner |
+| S15 | Credit minimum payment versus full payment | Billing/economics follow accepted terms |
+| S16 | Credit refund spans statement cycle | Correct balances, dues and subsequent statement |
+| S17 | PPI tier/expiry changes with balance | Enforce permitted restriction/redemption policy |
+| S18 | FD maturity on non-business day | Adopted calendar/payout and accrual rules apply |
+| S19 | RD missed instalment | Agreed arrears/penalty/maturity behaviour, no invented rule |
+| S20 | Loan partial payment then returned receipt | Allocation and reversal preserve exact balances |
+| S21 | Loan restructure with existing arrears | Versioned schedule, approval, disclosures and books |
+| S22 | Security release before repayment finality | Block until authorised discharge conditions |
+| S23 | ATM debit, no dispense | Correlate journal/switch; resolve under authoritative rules |
+| S24 | ATM partial dispense/retract/power loss | Physical outcome and final debit reconcile once |
+| S25 | Cash till mismatch | Exception/dual control, no unauthorised correction |
+| S26 | Incomplete settlement statement | Cannot mark reconciliation complete |
+| S27 | EOD crash/restart/double scheduler | No duplicate accrual, billing or maturity posting |
+| S28 | Backdated event after financial period close | Controlled adjustment/reopening policy |
+| S29 | Credential or scope revoked mid-command | Transaction boundary rechecks current authority |
+| S30 | Recovery/DR with in-flight payment | Preserve confirmed effect and resolve unknown references |
+| S31 | Wrong recipient or expired document link | No disclosure; verified version/hash on authorised download |
+| S32 | Report after corrected source | Mark restatement; preserve lineage and prior filing |
+| S33 | Dark launch/uncommissioned processor | Customer action unavailable despite module licence |
+| S34 | Currency scale/FX rounding | Exact approved representation and balanced rounding entries |
+| S35 | Joint/corporate/add-on aggregate limits | Mandate and combined exposure enforced |
+| S36 | UI Back/Forward/session expiry | Correct context, safe drafts and no duplicate command |
+| S37 | Cheque stop races with paid/clearing status | Show only authoritative effective stop; route already-paid conflicts |
+| S38 | Lost mobile device, recycled phone or removed relationship | Approved verified recovery; old authority remains rejected |
+| S39 | Financial approval intent changes across channels | Invalidate approval; preserve independent authority and shared counters |
+
+## Test generation and evidence
+
+For each enabled product, enumerate allowed institution/party/channel combinations, add all applicable S cases and record expected states, book entries, notices and owners. Use pairwise coverage for low-risk display combinations; use exhaustive boundary/concurrency tests for money, permissions, approval and idempotency. Track requirement/feature/journey/scenario IDs to automated test and human UAT evidence.
+
+Actual issuer/network/hardware certification and bank policy acceptance cannot be replaced by mocks or a local browser demo. Document excluded combinations and the reason. Expand this matrix when an offering adds a new legal duty or financial transition.

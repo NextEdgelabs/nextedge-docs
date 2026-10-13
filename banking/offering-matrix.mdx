@@ -1,0 +1,35 @@
+---
+title: "Institution and offering compatibility"
+description: "Separate institution permissions from the products, programmes and channels they may offer."
+---
+
+**Proposed capability matrix, not a legal-authorisation determination.**
+
+An institution type is a starting constraint, not sufficient evidence of permission. Record the legal entity actually holding deposits, lending, issuing cards or safeguarding prepaid funds. A sponsor/co-brand/technology partner does not inherit that entity's powers.
+
+| Offering | Authorised bank | Lending NBFC | Authorised PPI issuer | Sponsor/co-brand/technology partner |
+| --- | --- | --- | --- | --- |
+| Savings/current deposit accounts | Candidate only within bank licence/product powers | Disabled by default; no bank-like demand deposits inferred | No deposit-account power inferred from PPI authorisation | Distribution/servicing only under explicit agreement; no owned deposit book |
+| Term/public deposits | Candidate within applicable powers | Separate deposit-taking authorisation and entity policy required | Not implied | No implied permission |
+| Personal/business/secured loans | Candidate within permitted lending business | Candidate within NBFC category/policy | Not implied by PPI authorisation | Contracted sourcing/servicing; actual lender remains explicit |
+| Debit cards | Issuer/account/network eligibility required | No bank-debit issuing capability inferred | Not a debit account simply because card-shaped | Bank issuer owns account/card authority |
+| Prepaid/PPI cards or wallet | Separate permitted PPI issuer/programme configuration | Not implied by NBFC registration | Candidate only for authorised category and permitted uses | Restricted programme/distribution role |
+| Credit cards | Institution-specific eligibility/approval and network/processor contract | Specific issuer permission required; not automatic for every NBFC | Not implied by PPI authorisation | Issuer owns underwriting, receivable and regulated duties |
+| ATM services | Separate issuer/acquirer/switch/terminal commissioning | Not enabled by lending permission | Only explicitly permitted card/programme services | No blanket cash-withdrawal authority |
+| Treasury/dealing | Explicit new-project scope and institution permissions | Explicit permitted instruments and policy | Not implied | No implied authority |
+
+Use current [RBI source references](/banking/references) for the selected entity category. The matrix deliberately does not encode monetary limits or legal thresholds as software defaults.
+
+## Offering bundles
+
+- [Bank operating offering](/banking/offerings/bank): deposits/accounts, enabled lending/cards/channels and full operating controls.
+- [NBFC lending offering](/banking/offerings/nbfc): origination, underwriting, servicing, collateral, collections, books and reporting.
+- [Card/PPI programme offering](/banking/offerings/cards): explicit issuer, programme and funding/billing model.
+
+## Activation rule
+
+An offering can become available only after institution capability evidence, product policy, authority, financial book, interface certification, reconciliation, servicing, security and release acceptance are complete. Modules may be licensed but unavailable until these dependencies pass. UI visibility is the result of eligibility; server authorization is always enforced independently.
+
+## Revocation and withdrawal
+
+Stopping new applications does not close existing accounts or cancel unsettled obligations. A programme retirement plan needs servicing ownership, outstanding balances, holds, mandates, disputes, notices and retention. Customer contracts cannot silently inherit a replacement policy version.

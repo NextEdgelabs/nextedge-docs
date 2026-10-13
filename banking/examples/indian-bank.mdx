@@ -1,0 +1,50 @@
+---
+title: "Illustrative Indian bank configuration"
+description: "A fictional Indian bank showing applications, products, operating duties and complete money journeys."
+---
+
+**Fictional example: Banking Demo Bank India, code DEMOBANK. No RBI licence, real customer, live issuer, IFSC or deployed bank is asserted. Values illustrate review cases only.**
+
+## Institution setup
+
+| Area | Example proposed configuration |
+| --- | --- |
+| Entity | Indian bank category to be confirmed; never assume payments bank, commercial bank and co-operative bank powers are identical |
+| Locations | Mumbai Main and Pune Service branches, with Head Office operational oversight |
+| Currency/time | INR scale 2; Asia/Kolkata display; institution-owned business date, holiday and cutoff calendar |
+| Applications | Super Admin commissioning; Banking Ops; Customer Web; mobile API; ATM only after terminal/switch commissioning |
+| Accounts | SAVINGS-DEMO and CURRENT-DEMO, ownership and economics subject to adopted policy |
+| Deposits | FD-DEMO, with approved rate, funding, maturity and premature-closure policy required |
+| Lending | PERSONAL-DEMO; separate credit authority, KFS, repayment and collection policy |
+| Cards | DEBIT-DEMO; PREPAID-DEMO and CREDIT-DEMO conditional on separate issuer/programme approval |
+| Books | Core-owned versus external authoritative book is decision 1, not preselected |
+| Integrations | Bank/network/processor/verification contracts not yet supplied |
+| Readiness | Documentation only; every financial product remains uncommissioned |
+
+## Proposed operating duties
+
+Institution administrator maintains delegated organisation/configuration. Branch/customer-service officers service assigned customers. Teller and cash supervisor manage custody under distinct authority. Credit maker/checker sanction lending. Card operations manage programmes, fulfilment and disputes. Finance/reconciliation control books and settlement. Risk/compliance review restricted cases. No single account gets all duties automatically.
+
+## Worked daily journey
+
+1. The platform operator creates DEMOBANK and verifies its permitted institution/offering evidence.
+2. Product owners approve SAVINGS-DEMO, posting/fee/interest policies, disclosures and channel availability.
+3. CUSTOMER-001 completes the adopted KYC/consent journey and opens ACC-001 with its mandate.
+4. A confirmed INR 5,000.00 cash deposit produces the adopted cash/deposit entries, once.
+5. CARD-001 is issued and activated under the approved debit programme.
+6. A fee-free illustrative INR 1,000.00 purchase reserves funds, then matching presentment posts once. Available funds become INR 4,000.00, assuming no other holds.
+7. Finance matches instruction, hold, clearing, journal and settlement sources.
+8. Business-day close runs adopted accrual/fee jobs, validates totals and advances only after sign-off.
+9. The customer receives the correct statement and notices; authorised auditors can trace the original references.
+
+## ATM exception example
+
+For an INR 2,000.00 withdrawal, the terminal reports only INR 1,000.00 physically dispensed. The bank must correlate switch/device/journal evidence, resolve the actual debit under contracted rules and communicate the authoritative adjustment. The local UI cannot assert refund completion because a service case was saved. See [B23](/banking/modules/b23).
+
+## Configuration combinations to review
+
+Individual/joint/business accounts; primary/add-on cards; virtual/physical cards; bank-issued versus sponsored programme; maker/checker thresholds; branch versus digital origin; domestic versus international channels; fixed/floating lending; open/closed business period; source outage and unknown outcomes. Only permitted, approved combinations activate.
+
+## Example acceptance
+
+Verify one complete customer-to-book-to-reconciliation journey and one failed/unknown journey for each selected product. Repeat tenant/branch/mandate denial, stale product version, concurrency, duplicate event, reversal and restoration. No example login or live seed is implied; fixtures will be created only for a confirmed execution packet.

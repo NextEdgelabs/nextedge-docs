@@ -1,0 +1,31 @@
+---
+title: "Card and prepaid programme offerings"
+description: "Keep card lifecycle common while separating deposit, stored-value and revolving-credit books."
+---
+
+## Shared versus product-specific
+
+B17 owns common programme/card lifecycle; B21 owns or coordinates issuer processing; B22 owns disputes. Underlying money belongs to B18 debit, B19 prepaid or B20 credit, with B07/B24 accounting and reconciliation.
+
+| Aspect | Debit | Prepaid/PPI | Credit |
+| --- | --- | --- | --- |
+| Source of spend | Eligible deposit-account funds/approved overdraft | Permitted prefunded stored value | Sanctioned revolving credit |
+| Book | Deposit ledger plus holds | Stored-value liability and safeguarding evidence | Credit receivable, billing and repayment |
+| Main lifecycle | Link account → issue → authorise → present → reconcile | Verify tier → permitted load → spend → redeem/close | Underwrite → sanction → issue → spend → bill → repay/collect |
+| Unique controls | Account mandate/freeze/available funds | Category/KYC/load/use/redemption/safeguarding | Exposure, statement, interest, minimum due, allocation |
+| Common operations | Activation, block, replacement, controls, disputes | Same lifecycle where permitted | Same lifecycle plus credit servicing |
+| ATM use | Only commissioned programme/channel | Only permitted programme/cash-out capability | Cash advance only if explicitly supported |
+
+Physical/virtual, primary/add-on, individual/corporate, secured/unsecured, co-brand and domestic/international are additional dimensions, not interchangeable product types.
+
+## Full example and failure
+
+DEMO-PPI-01 receives a confirmed permitted INR 2,000.00 load. An INR 600.00 spend reserves and then posts once, leaving INR 1,400.00 stored value, assuming no fees. A merchant refund links to that spend and updates the correct liability. A credit-funded load is not enabled just because credit cards exist elsewhere in Banking. Credit and prepaid programme limits/books stay separate.
+
+## Programme commissioning
+
+Record issuer, sponsor/co-brand/LSP duties, network, BIN/IIN, processor, settlement/safeguarding bank, disclosures, secure card-data boundary, fulfilment vendor, reconciliation and dispute owner. The platform must support secure references without storing sensitive authentication data in ordinary app logs or databases.
+
+## First-release choices
+
+Select card type and issuer model first; then form factor, customer segment, controls and channel. Secured credit adds collateral/pledge and lien release. Corporate/add-on adds liability/mandate rules. International use adds approved currency/FX, network and regulatory policy. No variant is assumed approved by this document.

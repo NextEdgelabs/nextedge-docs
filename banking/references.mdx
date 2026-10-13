@@ -1,0 +1,45 @@
+---
+title: "M2P and primary-source reference basis"
+description: "Source-backed product patterns and current regulatory references, with explicit limits."
+---
+
+**Research checked 13 October 2026.** This is a requirements/design reference list. Institution counsel/compliance and accountable bank owners must validate applicability and amendments before adopting regulated policy.
+
+## M2P product references
+
+M2P publicly presents modular core banking, card-management and lending platforms. We use that separation as a product reference, not its private architecture or a feature-equivalence claim.
+
+| Primary source | Pattern informing this proposed document |
+| --- | --- |
+| [M2P Turing core banking](https://www.m2pfintech.com/turing-core-banking/) | Configurable banking operations and digital channels, connected to real financial books |
+| [M2P card management](https://m2pfintech.com/card-management-system/) | Common card lifecycle with distinct debit, prepaid and credit products |
+| [M2P credit cards](https://www.m2pfintech.com/credit-cards/) | Credit-product variants and account/programme controls |
+| [M2P core lending suite](https://m2pfintech.com/core-lending-suite/) | Origination, decisioning, servicing, collateral and collections as separate linked responsibilities |
+| [M2P loan origination](https://m2pfintech.com/loan-origination-system/) | Assisted/digital lending and evidence/contract dependencies |
+| [M2P products](https://events.m2pfintech.com/products/) | Distinction between platforms, channels and institution offerings |
+
+Provider marketing cannot supply Banking's fees, approval limits, contract schemas, regulatory permission, certification or operating readiness. Features not explicitly requested, such as AI decisioning, UPI or merchant acquiring, remain candidates requiring scope decisions.
+
+## Indian regulatory reference register
+
+| Primary source | Verified reference and use |
+| --- | --- |
+| [RBI master-directions index](https://www.rbi.org.in/Scripts/BS_ViewMasterDirections.aspx) | Current entity-specific directions must be selected, not one generic banking rule set |
+| [Commercial-bank card directions](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13155) | RBI index/page identifies 2025 directions updated 1 October 2026; full operative document must be captured/reviewed before implementing rules |
+| [NBFC credit-card directions](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12956) | Distinct issuer eligibility/conduct reference; NBFC registration alone is not a general card/deposit grant |
+| [PPI master directions](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12156) | Page states update 30 September 2026; distinguish prepaid issuer/category/funding/use from deposit and credit products |
+| [Digital Lending Directions 2025](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12848&Mode=0) | RE/LSP responsibility, borrower protection, evidence, funds flow and data duties need an accountable lending-policy packet |
+| [NBFC public-deposit directions](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12958) | Deposit-taking NBFC is a separate authorised category/configuration, not the lending-only default |
+| [PCI DSS](https://www.pcisecuritystandards.org/standards/pci-dss/) | Scope and assessment of systems storing, processing or transmitting payment-card data must be determined with the issuer/assessor |
+
+No historical 2022 card page is treated as the sole current authority for a 2026 deployment. This review intentionally avoids coding legal thresholds, deadlines or limits from an incomplete regulatory reading.
+
+## Source facts versus design proposals
+
+References establish public capability patterns and relevant policy sources. B01–B35 features, diagrams, examples, sequencing and combination tests are original proposals for owner review. They do not claim M2P implements the exact same internal state machine.
+
+Legacy implementation evidence comes from the current workspace's module index, source feature inventory and dated verification records. Current source contradicts older production-route-absence statements; route presence still proves neither full hosted acceptance nor live bank operations.
+
+## Mintlify authoring/runtime
+
+Use [official navigation](https://www.mintlify.com/docs/organize/navigation) and [official CLI preview](https://www.mintlify.com/docs/cli/preview). The local review now runs the official `mint` CLI rather than a substitute Markdown renderer. Search/assistant account features may require separate CLI sign-in; content, tabs and Mermaid preview are independently reviewable.

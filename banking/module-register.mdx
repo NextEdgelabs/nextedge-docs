@@ -1,0 +1,50 @@
+---
+title: "Module register"
+description: "Review 35 proposed modules and their relationship to applications and offerings."
+---
+
+**Review draft.** This is a new-project requirement register, not a completion report. All 35 modules are proposed for Banking. Legacy reuse is assessed separately on the [gap page](/banking/current-system-gap).
+
+| Module | Purpose | Family |
+| --- | --- | --- |
+| [B01 Institution and branch administration](/banking/modules/b01) | Operate separate legal institutions, regions, branches and service locations without sharing their customers or books. | core |
+| [B02 Staff identity and access](/banking/modules/b02) | Give bank employees the exact duties they need and remove access when those duties end. | core |
+| [B03 Product and programme configuration](/banking/modules/b03) | Define reusable financial products and institution programmes, then publish controlled versions to eligible channels. | core |
+| [B04 Customer onboarding and KYC](/banking/modules/b04) | Create verified individual and business customers before opening regulated products. | core |
+| [B05 Customer relationships and servicing view](/banking/modules/b05) | Show a verified, scoped relationship between parties, accounts, cards, loans and servicing branches. | core |
+| [B06 Account lifecycle and mandates](/banking/modules/b06) | Open, operate, restrict and close an account with accurate ownership and authority. | core |
+| [B07 Ledger and financial accounting](/banking/modules/b07) | Maintain balanced, traceable books or integrate a clearly designated external system of record. | core |
+| [B08 Savings current and overdraft servicing](/banking/modules/b08) | Operate transaction accounts, including interest, charges and authorised overdraft behaviour. | core |
+| [B09 Term and recurring deposits](/banking/modules/b09) | Manage deposit placement, scheduled funding, maturity and premature closure. | core |
+| [B10 Teller cash and vault](/banking/modules/b10) | Control physical cash and teller duties alongside the financial books. | core |
+| [B11 Payments beneficiaries and mandates](/banking/modules/b11) | Execute permitted payments with verified payees, proof, status recovery and reconciliation. | core |
+| [B12 Loan origination](/banking/modules/b12) | Turn an application into a documented lending agreement without confusing approval with disbursement. | lending |
+| [B13 Credit underwriting and decisioning](/banking/modules/b13) | Record reproducible, authorised credit decisions and policy exceptions. | lending |
+| [B14 Loan servicing and repayment](/banking/modules/b14) | Maintain contractual loan balances, schedules and lifecycle changes accurately. | lending |
+| [B15 Collateral and securities](/banking/modules/b15) | Track pledged assets and enforce release only when the secured obligation permits it. | lending |
+| [B16 Collections and recoveries](/banking/modules/b16) | Resolve arrears through authorised, recorded customer contact and financial outcomes. | lending |
+| [B17 Card programmes issuance and inventory](/banking/modules/b17) | Manage issuer-owned debit, prepaid and credit programmes and the physical/virtual card lifecycle. | cards |
+| [B18 Debit card operations](/banking/modules/b18) | Allow card spending against a permitted deposit account while preserving available funds and holds. | cards |
+| [B19 Prepaid cards wallets and PPI operations](/banking/modules/b19) | Operate permitted prepaid stored-value programmes without treating their balance as a bank deposit or credit line. | cards |
+| [B20 Credit card accounts billing and servicing](/banking/modules/b20) | Manage revolving credit from underwriting to statements, repayment, collections and closure. | cards |
+| [B21 Card authorisation clearing and settlement](/banking/modules/b21) | Process network messages and financial events with one economic effect per transaction. | cards |
+| [B22 Disputes chargebacks and remediation](/banking/modules/b22) | Resolve payment/card disputes with evidence, deadlines and controlled financial adjustment. | cards |
+| [B23 ATM application and terminal operations](/banking/modules/b23) | Operate a secure ATM customer session and terminal fleet through certified devices and switch interfaces. | cards |
+| [B24 Reconciliation and exception management](/banking/modules/b24) | Prove that instructions, bank books, provider outcomes and settlement funds agree. | control |
+| [B25 Treasury liquidity and settlement positions](/banking/modules/b25) | Manage approved liquidity and settlement obligations with clear separation from retail servicing. | control |
+| [B26 Risk fraud AML and compliance](/banking/modules/b26) | Apply institution-owned risk controls and handle reviewable cases without silently making autonomous decisions. | control |
+| [B27 Service requests and complaints](/banking/modules/b27) | Let customers and staff resolve servicing problems with ownership and customer-visible outcomes. | control |
+| [B28 Communications documents and consent](/banking/modules/b28) | Deliver the correct disclosures and documents through verified channels and retain evidence. | control |
+| [B29 Management and regulatory reporting](/banking/modules/b29) | Produce traceable financial, operational and regulatory reports from controlled source data. | control |
+| [B30 Banking APIs integration and data health](/banking/modules/b30) | Expose stable APIs and reconcile external facts without confusing transport success with banking execution. | control |
+| [B31 Business date EOD and scheduled operations](/banking/modules/b31) | Run financial and operational cycles exactly once per institution business date with controlled restart. | control |
+| [B32 Security audit deployment and resilience](/banking/modules/b32) | Prove the release protects bank data and can be operated, recovered and audited. | control |
+| [B33 Cheque operations and clearing](/banking/modules/b33) | Manage cheque books, instruments, clearing and returns with linked financial evidence. | core |
+| [B34 Approvals limits and operational controls](/banking/modules/b34) | Apply cross-channel approval and aggregate controls before a financial or sensitive administrative action can execute. | control |
+| [B35 Customer digital identity and security](/banking/modules/b35) | Verify customer access to products and secure web/mobile sessions without treating staff access as customer authority. | core |
+
+Each module includes required features, configuration, two end-to-end journeys, data dependencies, existing-system evidence, difficult cases and a pending decision. Module IDs B01–B35 belong only to the new Banking project; legacy M01–M23 remain unchanged.
+
+Do not enable every module for every institution. Use institution capability evidence, dependencies, offering terms, role permissions and channel readiness together. A lending-only NBFC, bank-issued prepaid programme and full-service bank need different configurations and financial books.
+
+Read [applications](/banking/applications), [offerings](/banking/offering-matrix) and [configuration](/banking/configuration) before reviewing modules individually.

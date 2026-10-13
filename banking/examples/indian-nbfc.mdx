@@ -1,0 +1,39 @@
+---
+title: "Illustrative Indian NBFC configuration"
+description: "A fictional lending NBFC with explicit limits on deposits, cards and channels."
+---
+
+**Fictional example: Banking Demo Finance India, code DEMONBFC. Lending category, regulatory permissions and real policy owners remain inputs. This example grants no deposit-taking or card-issuing powers.**
+
+## Offering setup
+
+| Area | Example proposed configuration |
+| --- | --- |
+| Primary offering | NBFC lending: personal and secured SME variants for review |
+| Channels | Assisted Banking Ops, borrower Customer Web and mobile APIs |
+| Origination | KYC/income evidence → consented bureau → credit policy → independent sanction |
+| Documentation | Adopted KFS, agreement, mandate, security and notice templates |
+| Disbursement/repayment | Contracted bank rails with explicit permitted destination, status and reconciliation |
+| Servicing | Loan book/schedule, allocation, quote, prepayment, foreclosure and controlled corrections |
+| Collections | Authorised agent allocation, conduct, promises, receipts and settlement authority |
+| Finance | Loan subledger, approved accounting, impairment/provisioning and regulatory reports |
+| Disabled by default | Demand deposit accounts, debit-card issuance, PPI issuance, credit-card issuance, ATM acquiring |
+| Conditional extension | Deposit-taking NBFC or specifically permitted card issuer requires a separate offering/policy/certification packet |
+
+## Worked borrower journey
+
+APP-001 requests INR 120,000.00. Verify identity/income/consent, assess with CREDIT-DEMO-v1, obtain sanction and present the exact accepted terms. Disbursement creates LN-001 only when its bank outcome is confirmed.
+
+For a later INR 10,000.00 receipt, the fictional allocation example uses INR 1,000.00 interest and INR 9,000.00 principal, leaving INR 111,000.00 principal. This is arithmetic illustration, not an interest or repayment policy. A bank return must reverse the original allocation and correct dues/history. A promise to pay is not a receipt.
+
+If LN-001 is secured, release the linked security only after approved discharge and closure. If overdue, route to permitted collections with the required agent/customer notice. Exceptions, restructuring, waiver/write-off and settlement require explicit authority.
+
+## Optional variants
+
+Housing finance, microfinance/group lending, vehicle/gold/property-backed lending, supply-chain finance and co-lending may need different customer types, evidence, schedules, security, conduct and reports. They are candidates, not enabled defaults.
+
+Co-lending must declare each lender's ownership, funding, disbursement/repayment allocation, ledger, reconciliation and customer disclosure. A sponsor relationship cannot silently combine customer access across tenants.
+
+## Completion evidence
+
+Demonstrate application → sanction → accepted agreement → confirmed disbursement → allocation → reversal/arrears handling → reconciled statement → closure/collateral release. Obtain real interface/policy owners and current entity-specific regulatory review before bank UAT.

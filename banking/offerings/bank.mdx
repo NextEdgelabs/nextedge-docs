@@ -1,0 +1,23 @@
+## Who this offering serves
+
+An authorised bank deploying Banking for institution operations and selected customer channels. The example does not assume all bank categories have identical powers.
+
+## Included capability groups for review
+
+Foundation B01–B07; deposits B08–B10; approved payment rails B11; lending B12–B16 where selected; card programmes B17–B22; ATM B23 where commissioned; operating controls B24–B32. Each is selectable subject to dependencies. Treasury breadth is separately decided.
+
+## Full representative journey
+
+Commission bank → approve products and finance posting rules → enrol staff/duties → onboard verified customer → open/fund account → issue eligible debit card → complete a web/mobile payment or ATM withdrawal → reconcile card/cash/network/book → run business-day close → produce customer and finance records.
+
+Deposits require interest/tax/maturity semantics. Lending requires underwriting, allocation and collections. Cards require clearing/settlement, disputes and sensitive-data controls. A bank cannot safely launch only their application forms.
+
+## Success and exception example
+
+The fictional DEMOBANK customer holds INR 5,000.00 available. An illustrative INR 1,000.00 debit-card purchase reserves INR 1,000.00, reducing available funds to INR 4,000.00 while the ledger remains unchanged until the approved posting event. Matching presentment posts one debit and resolves the hold. An issuer-approved reversal releases or reverses the original economic effect; a response timeout never triggers an unreferenced second debit. Fees and overdraft are excluded from this numerical illustration.
+
+## Configuration and acceptance
+
+Select institution category, authoritative books, business calendar, initial products, enabled rails, card issuer/processor and cash/ATM ownership. Test customer-to-branch access, joint/business mandates, exact balances, partial settlement, fraud restriction, failed close and disaster recovery. The bank approves source contracts, policies and release. See the [Indian bank configuration](/banking/examples/indian-bank).
+
+Cheque services use [B33](/banking/modules/b33). Cross-channel financial approvals/limits use [B34](/banking/modules/b34), and real customer digital access uses [B35](/banking/modules/b35). These dependencies must be commissioned before their related channels operate.

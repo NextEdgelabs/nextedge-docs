@@ -1,0 +1,44 @@
+---
+title: "Delivery plan and bank release gates"
+description: "A staged path from confirmed product scope to independently verified bank deployment."
+---
+
+**Proposed sequence. No code implementation or production release is authorised by this review.**
+
+| Stage | Deliverable | Completion evidence |
+| --- | --- | --- |
+| 0 Requirements review | Applications, offering matrix, module scope, journeys and decision register | Product owner confirms scope and outstanding exclusions |
+| 1 Authority and architecture | Institution type, system-of-record boundaries, contracts, duties and deployment model | Bank/client owners sign off exact policies and interface versions |
+| 2 Financial foundations | Product versions, customers/mandates, chosen books, exact money and operation lifecycle | Isolation, concurrency, idempotency, accounting and audit tests |
+| 3 First complete offering | One selected deposit/lending/card service from onboarding through closure/exception | Authoritative instruction, statement, reconciliation and recovery pass |
+| 4 Channels and operations | Ops, Customer Web, mobile API and selected ATM services | Complete channel tests, accessibility and terminal/processor certification |
+| 5 Controls and close | Reconciliation, business-day jobs, reports, disputes and incident handling | Count/amount controls, restart, exceptions and operator runbooks |
+| 6 Migration and hardening | Reconciled opening balances/history, security, performance and DR | Bank-agreed migration control totals, assessment and restore/failover evidence |
+| 7 Bank UAT and pilot | Named bank users test permitted products/duties on release candidate | Recorded expected/results/defects, approvals and pilot limits |
+| 8 Production authorisation | Bank release decision, on-call/incident/rollback and communications | Explicit release approval; monitored reconciliation after launch |
+
+## Build organisation
+
+Each execution packet includes a bounded module/product slice, actors, terms, source contracts, diagrams, sample data, expected book entries, failure states and acceptance IDs. Deliver one complete economic lifecycle rather than many screens that only save requests.
+
+The engineering stack and three web app separation can reuse current project patterns after review. ATM/device and processor boundaries may require separately deployed components. No arbitrary microservice split, scheduler, connector or cloud vendor is chosen by this plan.
+
+## Tests before user handoff
+
+Run relevant unit/calculation, database/transaction and contract tests; then browser/mobile-client and hardware/switch acceptance. Include fraud/restriction changes during execution, exact monetary boundaries, stale approval, duplicate and reordered events, unknown results and recovery. Test native saved document/CSV contents where offered.
+
+Use seeded synthetic data with two institutions and independent maker/checker identities. State the exact environment/build/URL and verify every test credential in that environment. Passwords remain outside repository/Mintlify content.
+
+## Release readiness checklist
+
+- Institution licence/capability and product terms accepted by accountable bank owners.
+- Authoritative interfaces certified; processor/network and ATM hardware acceptance where applicable.
+- Financial books, subledgers, controls and settlement reconcile.
+- Required disputes, complaints, recovery and exception ownership available; explicit bank-approved fallback where allowed.
+- Security/PCI assessment scope, privilege review, secrets and data-residency controls accepted.
+- Capacity/latency targets and monitoring agreed and verified.
+- Backup/restore/failover meets accepted RPO/RTO with in-flight operations reconciled.
+- Migration, operational training, support and rollback accepted.
+- Named bank UAT owner and explicit release authority approve the actual build.
+
+No local preview, passing mock suite, signed-out smoke test or saved form establishes these gates. CI was previously excluded for local legacy review; the new project's release checks must be agreed, not silently bypassed or started here.

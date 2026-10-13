@@ -1,0 +1,54 @@
+---
+title: "API and financial data contracts"
+description: "Define authoritative reads, quotes, instructions, outcomes and callbacks before building channels."
+---
+
+**Proposed contract requirements, not deployed endpoints or a final OpenAPI specification.**
+
+## Required contract families
+
+| Family | Required data/semantics |
+| --- | --- |
+| Institution/product discovery | Current permitted offerings, version, eligibility and unavailable reason |
+| Party/relationships | Stable namespace, exact matching, masked/full permissioned projection, complete relationships, correction order |
+| Account/book reads | Currency/scale, ledger/available balances, holds, restrictions, source/as-of/completeness |
+| Quote | Product/account/payee/amount/charges/tax, exact calculation version, expiry and applicable terms |
+| Instruction | Server-owned principal, original idempotency key, bound quote/proof/approval, accepted input hash |
+| Status | Stable operation/provider references, allowed transitions, authoritative result, finality and correction linkage |
+| Reconciliation | Complete source batch, counts/totals, matching keys, financial date and exceptions |
+| Documents/notices | Accepted version/hash, verified recipient, safe retrieval and delivery outcome |
+| ATM/switch | Terminal trust, protocol references, authorisation, dispenser result/journal, completion/reversal/finality |
+| Callback | Authenticated source, event ID/version/sequence, replay/order protection, scope and original correlation |
+
+## Example status representation
+
+```json
+{
+  "operationRef": "OP-DEMO-001",
+  "institutionCode": "DEMOBANK",
+  "productVersion": 1,
+  "amount": { "currency": "INR", "scale": 2, "minorUnits": "100000" },
+  "state": "pending",
+  "financialOutcome": "unconfirmed",
+  "providerRef": "PROVIDER-DEMO-001",
+  "reconciliationState": "awaiting-authoritative-evidence"
+}
+```
+
+INR 100,000 minor units means INR 1,000.00. Strings avoid unsafe numeric serialization for exact money. The final schema may differ after contract approval. A pending response never claims a completed debit/refund.
+
+## Canonical proposed records
+
+Institution; legal capability; branch; staff identity/membership/duty; party; relationship/mandate; programme; product/policy version; agreement; account/subledger; card token reference; authorisation hold; quote; operation; journal/line; settlement batch; reconciliation exception; servicing/dispute case; document/consent; audit; business-date job/checkpoint.
+
+Every record has an owning authority and scope. A customer may have separate institution relationships without granting cross-tenant access. Preserve external namespace and source version; do not merge on email alone.
+
+## Reliability requirements
+
+Store and recheck command intent and current authority around asynchronous proof/provider work. Commit related local state/audit atomically where required. Define the boundary where an external system can commit independently; use original references, durable dispatch/outcome records and reconciliation, not a fictitious distributed transaction. Client cancellation cannot roll back an already accepted external instruction.
+
+API versioning, pagination, strict input allowlists, no-store sensitive responses, redacted errors and trusted channel authentication are mandatory design constraints. Query/POST authentication patterns must be explicit for browser, mobile, server and terminal clients.
+
+## Interface handoff
+
+For every enabled provider/core/network, the owner supplies versioned schemas, sandbox examples, authentication/signing, rate/capacity, ordering, idempotency, timeout/status lookup, finality, corrections and certification requirements. The client team currently owns connectors unless a new scope decision changes that. No connector is implemented in this documentation task.

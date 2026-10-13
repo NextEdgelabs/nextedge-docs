@@ -1,0 +1,26 @@
+---
+title: "Applications and channel boundaries"
+description: "Five application surfaces sharing authorised business services without sharing privileges."
+---
+
+Banking has five requested application surfaces. The mobile item is an API product for mobile clients; a native mobile UI has not been commissioned. The ATM application needs separate terminal/device and network certification.
+
+| Application | Primary users | Owns | Must not imply |
+| --- | --- | --- | --- |
+| [Super Admin](/banking/apps/super-admin) | Platform operators and commissioned security roles | Institutions, subscriptions/modules, environment and permitted access governance | Global customer servicing or movement of institution funds. |
+| [Banking Operations](/banking/apps/banking-ops) | Branch, Head Office, finance, cards, lending, risk and other approved duties | Institution-scoped operating workspaces | One Bank Admin password can perform every maker/checker duty. |
+| [Customer Web](/banking/apps/customer-web) | Verified retail/business customers and authorised signatories | Own products, proof/consent, instructions and servicing | Access to any account with a matching email address. |
+| [Mobile-facing APIs](/banking/apps/mobile-api) | Approved customer mobile applications | Versioned discovery/read/instruction/status and security journeys | A completed native app or weaker proof than web. |
+| [ATM application](/banking/apps/atm) | ATM customers, with separately authenticated terminal operators | Secure terminal sessions, device workflow and switch coordination | A browser demo is a certified cash-dispensing ATM. |
+
+All applications share institution/product policy and financial services. They receive distinct credentials/scopes, trusted origins or device trust, data projections, rate controls and audit channels. Do not copy business calculations into channel UI.
+
+## Proposed code ownership
+
+A future repository may contain `apps/super-admin`, `apps/banking-ops`, `apps/customer-web`, `apps/atm`, a shared domain/API service and packages for UI/contracts. Mobile APIs are an independently versioned interface within the server boundary. Split deployment/service boundaries when reliability, certification or isolation requires it, after design review. This is a proposal, not repository scaffolding.
+
+Operations navigation retains the workspace during internal movement. Search → detail → action → saved status → return restores filters. Customers see only enabled, commissioned products. A disabled offering returns a safe denial even if a caller bypasses the menu.
+
+## Common channel acceptance
+
+Sign in/enrol → discover authorised products → read fresh context → quote → consent/proof → submit once → inspect status → recover unknown outcome → see statement/history. Test logout, revoked access, session/device expiry, business-date boundaries and two-institution isolation in every channel.
