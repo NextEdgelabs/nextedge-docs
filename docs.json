@@ -187,16 +187,34 @@
             "group": "Lending modules",
             "pages": [
               "banking/modules/b12",
-              "banking/modules/b13"
+              "banking/modules/b13",
+              "banking/modules/b14",
+              "banking/modules/b15",
+              "banking/modules/b16"
             ]
           },
           {
             "group": "Cards and ATM modules",
-            "pages": []
+            "pages": [
+              "banking/modules/b17",
+              "banking/modules/b18",
+              "banking/modules/b19",
+              "banking/modules/b20",
+              "banking/modules/b21",
+              "banking/modules/b22",
+              "banking/modules/b23"
+            ]
           },
           {
             "group": "Control and delivery modules",
-            "pages": []
+            "pages": [
+              "banking/modules/b24",
+              "banking/modules/b25",
+              "banking/modules/b26",
+              "banking/modules/b27",
+              "banking/modules/b28",
+              "banking/modules/b29"
+            ]
           },
           {
             "group": "Review and decisions",
