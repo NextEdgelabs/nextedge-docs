@@ -160,7 +160,8 @@
             "group": "Offerings",
             "pages": [
               "banking/offering-matrix",
-              "banking/offerings/bank"
+              "banking/offerings/bank",
+              "banking/offerings/nbfc"
             ]
           },
           {
