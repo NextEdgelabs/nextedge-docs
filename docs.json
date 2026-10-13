@@ -24,6 +24,7 @@
           { "group": "People and organization", "pages": ["company/organization", "company/ways-of-working", "company/everyday-operations"] },
           { "group": "Onboarding", "pages": ["onboarding/journey", "onboarding/access-and-setup", "onboarding/role-paths"] },
           { "group": "Delivering work", "pages": ["delivery/lifecycle", "delivery/requirements-and-quality"] },
+          { "group": "Support and service levels", "pages": ["support/cycle-and-sla"] },
           { "group": "Domain playbooks", "pages": ["domains/overview", "domains/sustainability", "domains/pharma", "domains/hoisst-erp", "domains/workforce", "domains/loyalty"] }
         ]
       },

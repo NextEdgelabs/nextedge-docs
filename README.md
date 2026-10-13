@@ -28,6 +28,7 @@ Use the fallback port printed by the CLI if 3333 is occupied.
 | company/ | Company context, organization, working practices, everyday operations |
 | onboarding/ | Joiner journey, access, role-specific learning |
 | delivery/ | Project lifecycle, requirements, quality |
+| support/ | Support cycle, P0–P4 SLA targets, recovery, escalation, closure |
 | domains/ | Sustainability, pharma, Hoisst ERP, workforce, loyalty |
 | engineering/ | Architecture, stack, data, APIs, web/mobile, security, releases |
 | reference/ | Templates, glossary, handbook ownership |

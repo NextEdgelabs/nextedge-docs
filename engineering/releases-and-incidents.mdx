@@ -38,7 +38,7 @@ A code rollback may not reverse a data migration, external notification, payment
 | Failed field sync | Reveals work the manager may not yet see |
 | Backup and restore checks | Confirms a recovery path exists and works |
 
-Set actual alert thresholds, support coverage, escalation contacts, and recovery objectives in the project runbook. This edition does not invent company-wide service-level commitments.
+Follow the [support cycle and SLA](/support/cycle-and-sla) for P0–P4 priorities and targets: P0 within 1 hour, P1 within 24 hours, P2 within 1 week, and P3/P4 scheduled by the team after review. Record alert thresholds, support coverage, escalation contacts, and project-specific recovery procedures in the runbook.
 
 ## Incident flow
 
@@ -54,6 +54,8 @@ flowchart TB
 ```
 
 Escalate immediately when access, money, stock, rewards, or business-critical availability may be affected. Do not wait for a perfect diagnosis. The coordinator assigns investigation and communication roles so recovery work remains focused.
+
+For P0, aim to restore service or contain critical impact within 1 hour using the safest compatible rollback, recovery action, or focused hotfix. Record recovery separately from permanent resolution and closure. Follow the [P0 recovery path](/support/cycle-and-sla#p0-recovery-restore-first-then-complete-the-fix), then reconcile data and assign prevention work.
 
 ## Support handoff
 
