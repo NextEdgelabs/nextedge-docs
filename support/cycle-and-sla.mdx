@@ -26,17 +26,17 @@ flowchart TB
 | Stage | Responsible role | Required record |
 | --- | --- | --- |
 | Intake | Technical Operations; Product Owner/Manager maintains linked work records | Original thread, reference, receipt time, affected project and contact |
-| Triage | Technical Operations with Senior Developer; Senior Tech Ops coordinates impact | Issue type, impact, priority, scope assessment |
-| Assignment | Product Owner/Manager with Senior Tech Ops and Technical Operations | Accountable owner, target deadline or review plan, next update time |
-| Recovery or fix | Senior Developer and assigned Developer; Senior Tech Ops assists; Tech Ops authorizes release/recovery | Diagnosis, chosen action, approvals, implementation reference |
+| Triage | Technical Operations with Senior Developer; Senior Manager (Tech/Ops) coordinates impact | Issue type, impact, priority, scope assessment |
+| Assignment | Product Owner/Manager with Senior Manager (Tech/Ops) and Technical Operations | Accountable owner, target deadline or review plan, next update time |
+| Recovery or fix | Senior Developer and assigned Developer; Senior Manager (Tech/Ops) assists; Tech Ops authorizes release/recovery | Diagnosis, chosen action, approvals, implementation reference |
 | Verification | Tech Ops testing/UAT owner with affected workflow owner | Service checks, business-flow checks, data reconciliation where relevant |
-| Closure | Product Owner/Manager records outcome; Senior Tech Ops coordinates client confirmation | Confirmed outcome, customer communication, evidence, remaining follow-up |
+| Closure | Product Owner/Manager records outcome; Senior Manager (Tech/Ops) coordinates client confirmation | Confirmed outcome, customer communication, evidence, remaining follow-up |
 
 One owner remains accountable for the ticket even when several teams contribute. A handoff must name the receiving owner and preserve the original reference and timestamps.
 
 Use the [role-by-role support handoff](/delivery/requirements-and-handoffs#support-handoff-across-roles). For P0, start technical investigation and authorized recovery immediately while Technical Operations and Product Owner/Manager maintain the record; coordination must not become a serial approval queue.
 
-Tech Ops owns testing, UAT acceptance, and production release or rollback/hotfix sign-off. Senior Developer and Senior Tech Ops provide technical recovery help. If a primary owner is unavailable, use the [permission and alternate-owner workflow](/company/coverage-and-exceptions); record authority before execution.
+Tech Ops owns testing, UAT acceptance, and production release or rollback/hotfix sign-off. Senior Developer and Senior Manager (Tech/Ops) provide technical recovery help. If a primary owner is unavailable, use the [permission and alternate-owner workflow](/company/coverage-and-exceptions); record authority before execution.
 
 ## Priority and SLA targets
 
@@ -82,13 +82,13 @@ flowchart TB
   H --> I["Schedule root-cause and permanent-fix follow-up"]
 ```
 
-Use the named Tech Ops authority and approved project runbook for recovery authorization. Senior Developer and Senior Tech Ops supply technical recovery input; an assigned capable executor performs the approved action. A rollback must be compatible with the current data and migrations. It does not undo external payments, stock movements, or notifications. A hotfix still needs focused review, relevant checks, smoke tests, and a recovery path.
+Use the named Tech Ops authority and approved project runbook for recovery authorization. Senior Developer and Senior Manager (Tech/Ops) supply technical recovery input; an assigned capable executor performs the approved action. A rollback must be compatible with the current data and migrations. It does not undo external payments, stock movements, or notifications. A hotfix still needs focused review, relevant checks, smoke tests, and a recovery path.
 
 Restoring availability is not proof that data is correct. Reconcile affected records and keep the incident open for remaining verification. Record permanent fixes and prevention work as linked follow-up with an owner and date.
 
 ## Escalation and communication
 
-Escalate P0 immediately to the technical and incident owners. Escalate any P0/P1 recovery risk, likely SLA miss, unowned ticket, or blocked dependency as soon as it is known. Senior Tech Ops coordinates customer updates. Founder/CEO, SVP, or VP gives final requirement or commercial approval when additional scope or financial/billing decisions are involved.
+Escalate P0 immediately to the technical and incident owners. Escalate any P0/P1 recovery risk, likely SLA miss, unowned ticket, or blocked dependency as soon as it is known. Senior Manager (Tech/Ops) coordinates customer updates. Founder/CEO, SVP, or VP gives final requirement or commercial approval when additional scope or financial/billing decisions are involved.
 
 Send updates on ownership, material changes, recovery, resolution, and closure through the same support thread. Each update should state current impact, action underway, owner, expected outcome or known uncertainty, and next update time.
 

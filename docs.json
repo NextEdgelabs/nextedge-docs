@@ -55,6 +55,7 @@
             "group": "Delivering work",
             "pages": [
               "delivery/lifecycle",
+              "delivery/delivery-methods",
               "delivery/requirements-and-handoffs",
               "delivery/requirements-and-quality"
             ]
